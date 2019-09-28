@@ -1,10 +1,15 @@
 import numpy as np
 
-print("Hello, world!")
+# If statements
+a = "hello."
+b = "goodbye!"
 
-x = 0
+if ("!" in a or "." in a) and ("." in b or "!" in b):
+    print("howdy doo!")
 
-for i in range(5):
-    x += 1
-# test
-array = np.array([0, 1, 2, 3])
+# For loops
+
+a = np.array(["a", "b", "c", "d"])
+np.size(a, 0)
+for i in range(np.size(a, 0)):
+    print(a[i])
