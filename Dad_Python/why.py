@@ -3,7 +3,7 @@
 
 import numpy as np
 
-n = 3
+n = 4
 a = np.zeros((n**2))
 
 print(a)
@@ -17,5 +17,14 @@ def f(x):
 for i in range(np.size(a)):
     print("place: " + str(f(i)) + "Number: " + str(i))
     a[f(i)] = i
-
+a.shape = (n,n)
 print(a)
+
+################################################################################
+
+a = np.zeroes((n**2))
+
+def f(x):
+    if
+
+for i in range(np.size(a)):
