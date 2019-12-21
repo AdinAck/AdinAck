@@ -17,5 +17,5 @@ print(Fraction(((2*b[0])/((1/b[0])+b[0])-(b[1]/((1/b[0])+b[1])))/\
 (2/((1/b[0])+b[0])-(1/((1/b[0])+b[1])))).limit_denominator())
 
 # Without fractions
-m = tuple(input("m1: ")); m2 = float(input("m2: "))
+m1 = float(input("m1: ")); m2 = float(input("m2: "))
 print(((2*m1)/((1/m1)+m1)-(m2/((1/m1)+m2)))/(2/((1/m1)+m1)-(1/((1/m1)+m2))))
