@@ -1,6 +1,6 @@
 import numpy as np
 
-n = 3
+n = 4
 
 # ZigZag
 a = np.arange(0,n**2); b = np.zeros((n,n))
@@ -14,12 +14,13 @@ print(b)
 a = np.arange(n**2); a.shape = (n,n)
 for i in range(np.size(a,0)):
     if i % 2 != 0: a[i] = np.flip(a[i])
-print(a)
+# print(a)
 
 #===============================================================================
 
 # Popcorn
-b = b.flatten()
+
+b = np.zeros(n**2)
 
 def f(x):
     if x % 2 == 0: return x//2
@@ -29,4 +30,4 @@ for i in range(np.size(b)):
     b[f(i)] = i
 
 b.shape = (n,n)
-print(b)
+# print(b)
