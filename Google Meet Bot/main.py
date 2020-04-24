@@ -1,3 +1,4 @@
+import pyautogui
 import cleverbot as c
 import Tesseract as t
 c.open()

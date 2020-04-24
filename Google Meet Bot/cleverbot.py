@@ -1,11 +1,15 @@
 import cleverbotfree.cbfree
 import sys
+print("Initializing...")
 cb = cleverbotfree.cbfree.Cleverbot()
 
 def open():
+    print("Establishing connection with Cleverbot...")
     try:
         cb.browser.get(cb.url)
+        print("Done.")
     except:
+        print("Failed, closing.")
         cb.browser.close()
         sys.exit()
 
@@ -25,7 +29,7 @@ def chat(userInput):
     a.append(bot[p:])
     for i in range(len(a)):
         if "cleverbot" in a[i].lower():
-            a[i] = "Artin"
+            a[i] = "Adin"
 
     return "".join(a)
 

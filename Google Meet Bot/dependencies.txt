@@ -3,3 +3,4 @@ opencv-python
 cleverbotfree
 pytesseract
 pillow
+pyautogui
