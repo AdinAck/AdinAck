@@ -1,8 +1,9 @@
 import pyautogui
-import cleverbot as c
+# import cleverbot as c
 import Tesseract as t
-c.open()
-string = t.imToString(396, 240, 396+417, 240+42)
-print("Sending",string)
-print("Received",c.chat(string))
-c.close()
+# c.open()
+while True:
+    string = t.imToString(428, 754, 428+1090, 754+292)
+    print("Sending",string.split(". ")[-1])
+    # print("Received",c.chat(string))
+# c.close()
