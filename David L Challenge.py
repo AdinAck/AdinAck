@@ -30,4 +30,4 @@ for i in range(np.size(b)):
     b[f(i)] = i
 
 b.shape = (n,n)
-# print(b)
+print(b)
