@@ -5,19 +5,27 @@ import cleverbot as c
 import Tesseract as t
 
 c.open()
+p = input("Parameters: ")
+if "verbose" in p: verbose = True
+else: verbose = False
+if "safe" in p: safe = True
+else: safe = False
+if "control" in p: control = True
+else: control = False
 
-input()
+input("Press enter to proceed...")
 time.sleep(1)
 
-pyautogui.moveTo(1627, 992)
-time.sleep(.5)
-pyautogui.click()
-time.sleep(.5)
-pyautogui.moveTo(1800, 124)
-pyautogui.click()
-pyautogui.moveTo(1630, 1010)
-time.sleep(.5)
-pyautogui.click()
+if control:
+    pyautogui.moveTo(1627, 992)
+    time.sleep(.5)
+    pyautogui.click()
+    time.sleep(.5)
+    pyautogui.moveTo(1800, 124)
+    pyautogui.click()
+    pyautogui.moveTo(1630, 1010)
+    time.sleep(.5)
+    pyautogui.click()
 
 lastCaption = ["1234abcd"]
 lastChat = ["1234abcd"]
@@ -39,7 +47,8 @@ def sendReceive(send):
                     if word in receive:
                         raise Exception("Abort sending,",word,"alerted filter.")
                 pyautogui.write(receive.replace("cleverbot","Adin").lower()[:-1])
-                pyautogui.press('enter')
+                if not safe:
+                    pyautogui.press('enter')
                 break
             except Exception as e:
                 print(e)
@@ -63,6 +72,7 @@ def read(x1,y1,x2,y2):
 while True:
     # Read live captions
     thing = read(68, 864, 68+1090, 997+32)
+    if verbose: print("Captions:",thing)
     for caption in thing:
         if min([hamming.distance(caption,i) for i in lastCaption]) >= 4:
             if "cleverbot" in caption.lower() and "." in caption.lower():
@@ -77,12 +87,9 @@ while True:
 
     # Read chat
     thing2 = read(1613, 160, 1902, 1000)
+    if verbose: print("Chat:",thing2)
     for chat in thing2:
         if min([hamming.distance(chat,i) for i in lastChat]) >= 4:
-            if "^" in chat:
-                pyautogui.write("^^")
-                pyautogui.press('enter')
-                lastchat.append(chat)
             if "cleverbot" in chat.lower():
                 sendReceive(chat)
                 output = chat
