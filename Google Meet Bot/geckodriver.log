@@ -5167,3 +5167,46 @@ JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/10.2.39/0.js, l
 JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
 JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
 JavaScript error: https://eus.rubiconproject.com/usync.html?p=33across&endpoint=us-east, line 12: SecurityError: The operation is insecure.
+1587850010214	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\rhett\\AppData\\Local\\Temp\\rust_mozprofileYBwQB6"
+*** You are running in headless mode.
+1587850012075	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1587850013044	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1587850013044	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1587850013045	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1587850013045	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1587850014338	Marionette	INFO	Listening on port 54385
+1587850014425	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://bid.underdog.media/bcv1.js, line 2: SyntaxError: expected expression, got ']'
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/10.2.39/0.js, line 22: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/10.2.39/0.js, line 22: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/10.2.39/0.js, line 22: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/10.2.39/0.js, line 22: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/10.2.39/0.js, line 22: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/10.2.39/0.js, line 22: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/10.2.39/0.js, line 22: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/10.2.39/0.js, line 22: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/10.2.39/0.js, line 22: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/10.2.39/0.js, line 22: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/10.2.39/0.js, line 22: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/10.2.39/0.js, line 22: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/10.2.39/0.js, line 22: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/10.2.39/0.js, line 22: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/10.2.39/0.js, line 22: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/10.2.39/0.js, line 22: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/10.2.39/0.js, line 22: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/10.2.39/0.js, line 22: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/10.2.39/0.js, line 22: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/10.2.39/0.js, line 22: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
+JavaScript error: https://eus.rubiconproject.com/usync.html?p=33across&endpoint=us-east, line 12: SecurityError: The operation is insecure.
