@@ -81,7 +81,7 @@ while True:
                     thing3 = read(68, 997, 68+1090, 997+32)
                     caption = thing3[thing2.index(caption)+1]
                 sendReceive(caption)
-            lastCaption.append(caption)
+                lastCaption.append(caption)
     if len(lastCaption) > 30:
         lastCaption.pop(0)
 
