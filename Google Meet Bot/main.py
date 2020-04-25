@@ -1,11 +1,13 @@
 import time
 import pyautogui
+from textdistance import hamming
 import cleverbot as c
 import Tesseract as t
 
 c.open()
 
 input()
+time.sleep(1)
 
 pyautogui.moveTo(1627, 992)
 time.sleep(.5)
@@ -17,17 +19,34 @@ pyautogui.moveTo(1630, 1010)
 time.sleep(.5)
 pyautogui.click()
 
-lastCaption = ""
+lastCaption = ["1234abcd"]
+lastChat = ["1234abcd"]
+output = "1234abcd"
 triggers = ["adin","aiden","hayden","ayden","aden","aidan","eden", "aid in"]
+filter = ["?", "love", "kill", "sweetie", "kiss", "die", "death", "sex", "cute", "cleverbot", "fuck", "shit", "scream"]
+previousSend = ""
+
 def sendReceive(send):
-    print("Sending:",send)
-    thing = c.chat(send)
-    print("Received:", thing)
-    pyautogui.write(thing)
-    pyautogui.press('enter')
+    global previousSend
+    print("Read:",send.lower().replace("cleverbot", ""))
+    if hamming.distance(send, previousSend) >= 4:
+        while True:
+            try:
+                receive = c.chat(send.lower().replace("cleverbot", ""))
+                previousSend = receive
+                print("Sending:", receive)
+                for word in filter:
+                    if word in receive:
+                        raise Exception("Abort sending,",word,"alerted filter.")
+                pyautogui.write(receive.replace("cleverbot","Adin").lower()[:-1])
+                pyautogui.press('enter')
+                break
+            except Exception as e:
+                print(e)
+                print("Retrying...")
 def read(x1,y1,x2,y2):
     thing = t.imToString(x1,y1,x2,y2)
-    thing = list(thing.split("\n"))
+    thing = [list(i) for i in thing.split("\n")]
     a = []
     for string in thing:
         for i in range(len(string)):
@@ -43,24 +62,31 @@ def read(x1,y1,x2,y2):
 
 while True:
     # Read live captions
-    thing = read(68, 997, 68+1090, 997+32)
+    thing = read(68, 864, 68+1090, 997+32)
     for caption in thing:
-        if lastCaption != caption:
-            if "cleverbot" in send.lower() and "." in send.lower():
+        if min([hamming.distance(caption,i) for i in lastCaption]) >= 4:
+            if "cleverbot" in caption.lower() and "." in caption.lower():
                 if caption == "cleverbot.":
                     time.sleep(4)
-                    caption = read(68, 997, 68+1090, 997+32)
+                    thing3 = read(68, 997, 68+1090, 997+32)
+                    caption = thing3[thing2.index(caption)+1]
                 sendReceive(caption)
-        lastCaption = caption
+            lastCaption.append(caption)
+    if len(lastCaption) > 30:
+        lastCaption.pop(0)
 
     # Read chat
     thing2 = read(1613, 160, 1902, 1000)
     for chat in thing2:
-        if lastChat != chat:
-            if "cleverbot" in send.lower() and "." in send.lower():
-                if chat == "cleverbot.":
-                    time.sleep(4)
-                    chat = read(1613, 160, 1902, 1000)
+        if min([hamming.distance(chat,i) for i in lastChat]) >= 4:
+            if "^" in chat:
+                pyautogui.write("^^")
+                pyautogui.press('enter')
+                lastchat.append(chat)
+            if "cleverbot" in chat.lower():
                 sendReceive(chat)
-        lastChat = chat
+                output = chat
+                lastChat.append(chat)
+    if len(lastChat) > 30:
+        lastChat.pop(0)
 c.close()
