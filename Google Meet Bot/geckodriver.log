@@ -1116,8 +1116,10 @@ JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/10.2.39/0.js, l
 * Can't use WebGL in headless mode (https://bugzil.la/1375585).
 JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
 JavaScript error: https://eus.rubiconproject.com/usync.html?p=33across&endpoint=us-east, line 12: SecurityError: The operation is insecure.
-1587763317468	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\rhett\\AppData\\Local\\Temp\\rust_mozprofileYc8gGK"
-*** You are running in headless mode.
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 37784, Gecko_IOThread] WARNING: file Z:/task_1585933993/build/src/ipc/chromium/src/base/process_util_win.cc, line 166
+1587769763709	Marionette	INFO	Stopped listening on port 49476
+
 1587763317843	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
 1587763318325	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
 1587763318325	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
@@ -1412,8 +1414,10 @@ JavaScript warning: https://cdn-ssl.vidible.tv/prod/ad-client/js/10.2.39/0.js, l
 * Can't use WebGL in headless mode (https://bugzil.la/1375585).
 JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
 JavaScript error: https://eus.rubiconproject.com/usync.html?p=33across&endpoint=us-east, line 12: SecurityError: The operation is insecure.
-1587764200893	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\rhett\\AppData\\Local\\Temp\\rust_mozprofileks0ETe"
-*** You are running in headless mode.
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 47744, Gecko_IOThread] WARNING: file Z:/task_1585933993/build/src/ipc/chromium/src/base/process_util_win.cc, line 166
+1587769762752	Marionette	INFO	Stopped listening on port 56100
+
 1587764201315	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
 1587764201852	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
 1587764201852	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
