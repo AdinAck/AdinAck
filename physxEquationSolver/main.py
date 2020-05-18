@@ -8,12 +8,6 @@ equations = [["a","v/t"], ["F","m*a"], ["v","d/t"], ["W", "F*d"], ["W", "P*t"]]
 
 formulas =  [["a","v/t"], ["F","m*a"], ["v","d/t"], ["W", "F*d"], ["W", "P*t"]]
 
-# from converter import convert
-# equations = convert()
-# formulas = convert()
-
-#test comment fdfdsasdf
-
 def permutate(arr,available):
     out = []
     solveFor = []
@@ -22,40 +16,37 @@ def permutate(arr,available):
             solveFor.append(char)
     for char in solveFor:
         # print("Solving",arr,"for",char)
-        # print("-".join([arr[1],arr[0]]))
+        print("-".join([arr[1],arr[0]]))
         final = [char,list(nonlinsolve([parse_expr("-".join([arr[1],arr[0]]))],(parse_expr(char))))[0][0]]
         final[1] = str(final[1])
         if "complexes" in final[1].lower() or "emptyset" in final[1].lower() or "conditionset" in final[1].lower():
             break
         if "complement" in final[1].lower():
-            n = 0
+            final[1] = final[1].split("Complement(FiniteSet")[1]
             for i in range(len(final[1])):
-                if final[1][i] == "(" and n < 2:
-                    n += 1
-                    start = i+1
-                if final[1][i] == ")":
+                if final[1][i] == ",":
                     end = i
                     break
-            final[1] = final[1][start:end]
-            if "(" in final[1]:
-                final[1] = final[1]+")"
-        doIt = True
-        for dude in equations:
-            if final[0] == dude[0] and final[1] == dude[1]:
-                doIt = False
-                break
-        if doIt:
-            print(final)
-            out.append(final)
+            final[1] = final[1][:end]
+        # print(final)
+        out.append(final)
 
     return out
 
 def generator(equations,available):
     output = []
     temp = []
+    # print("before:",equations)
     for arr in equations:
         temp.extend(permutate(arr,available))
+        for d in range(len(temp)-1,-1,-1):
+            for eq in range(len(equations)-1,-1,-1):
+                if equations[eq][0] == temp[d][0] and equations[eq][1] == temp[d][1]:
+                    temp.pop(d)
+                    d-=1
     equations.extend(temp)
+    # print("after:",equations)
+
     for p in equations:
         loc = []
         for l in range(len(equations)):
@@ -78,9 +69,20 @@ def generator(equations,available):
                 output.append(garit)
                 # print(equations)
     temp = []
+    # print("before:",equations)
     for arr in output:
         temp.extend(permutate(arr,available))
+        # print("temp:",temp)
+        for d in range(len(temp)-1,-1,-1):
+            for eq in range(len(output)-1,-1,-1):
+                # print(d)
+                if output[eq][0] == temp[d][0] and output[eq][1] == temp[d][1]:
+                    # print("pop!")
+                    temp.pop(d)
+                    # print(temp)
+                    d-=1
     equations.extend(temp)
+    # print("after:",equations)
     equations.reverse()
     # print(equations)
     return equations
@@ -184,7 +186,6 @@ while i < len(temp):
         if temp[j] in bad:
             break
     i += 1
-# available = ["dx", "F", "m", "a", "v", "t", "d", "W", "P"]
 
 available = list(dict.fromkeys(available))
 thing = list(available)
@@ -208,8 +209,7 @@ for c in arr:
 
 print("Available variables:",available)
 
-
-# print(replaceExclude("wow pie has pi and pictures","pi", "3",[","," ","!"]))
+# print("test:",replaceExclude("-1.73205080756888*sqrt(T*kB/m)", "kB", "[]", bad))
 
 while True:
     stuff = input("var name? ")
@@ -219,15 +219,16 @@ while True:
     val = input(know+" = ")
     arr.append([know,val])
 
-
-
-for e in equations:
-    for c in arr:
-        e[1] = replaceExclude(e[1],c[0],c[1],bad)
-        e[0] = replaceExclude(e[0],c[0],c[1],bad)
+# for e in equations:
+#     for c in arr:
+#         e[1] = replaceExclude(e[1],c[0],c[1],bad)
+#         e[0] = replaceExclude(e[0],c[0],c[1],bad)
 
 # os.system('cls')
 equations2 = generator(equations,available)
 formulas2 = generator(formulas,available)
+
+# print(equations2)
+# print(formulas2)
 
 gigaMegaSolver(equations2,formulas2,available)

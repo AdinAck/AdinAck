@@ -61,5 +61,5 @@ Q/dt = (k*A*dT)/L
 P*V = n*R*T
 P*V = Nm*kB*T
 K = (3*kB*T)/2
-W = iP*dV
+W = -P*dV
 dU = Q + W
