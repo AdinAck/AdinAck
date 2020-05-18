@@ -236,6 +236,8 @@ while True:
     arr.append([know,val])
 
 
+
+
 # os.system('cls')
 equations2 = generator(equations,available)
 formulas2 = generator(formulas,available)
