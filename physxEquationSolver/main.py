@@ -129,6 +129,33 @@ def replaceExclude(string, name, val, bad):
     # print("after:",out)
 
     return out
+
+def findVar(string, name, bad):
+
+    # print("before:",string)
+    length = len(name)
+    i = 0
+    while i < len(string)-length+1:
+        # print(string[i:i+length])
+        if string[i:i+length] == name:
+            isLeftGood = False
+            isRightGood = False
+            if i != 0:
+                if string[i-1] in bad:
+                    isLeftGood = True
+            else: isLeftGood = True
+            if i != len(string)-length:
+                if string[i+length] in bad:
+                    isRightGood = True
+            else: isRightGood = True
+            if isLeftGood and isRightGood:
+                # print("Replacing",name,"with",val,"in",string)
+                return True
+            # print(string[i:i+length],isLeftGood,isRightGood)
+        i += 1
+    # print("after:",out)
+
+    return False
 """
 t = theta*5
 """
