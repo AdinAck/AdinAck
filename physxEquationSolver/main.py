@@ -264,9 +264,4 @@ def run():
             e[1] = replaceExclude(e[1],c[0],c[1],bad)
             e[0] = replaceExclude(e[0],c[0],c[1],bad)
 
-    for e in formulas2:
-        for c in arr:
-            e[1] = replaceExclude(e[1],c[0],c[1],bad)
-            e[0] = replaceExclude(e[0],c[0],c[1],bad)
-
     gigaMegaSolver(equations2,formulas2,available,bad)
