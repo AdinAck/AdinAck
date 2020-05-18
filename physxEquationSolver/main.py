@@ -4,13 +4,10 @@ import numpy as np
 from sympy import nonlinsolve
 from sympy.parsing.sympy_parser import parse_expr
 
-equations = [["a","v/t"], ["F","m*a"], ["v","d/t"], ["W", "F*d"], ["W", "P*t"]]
-
-formulas =  [["a","v/t"], ["F","m*a"], ["v","d/t"], ["W", "F*d"], ["W", "P*t"]]
-
 def permutate(arr,available):
     out = []
     solveFor = []
+    bad = [" ", "*", "/", "+", "-", "(", ")"]
     for char in available:
         if findVar(arr[0],char,bad) or findVar(arr[1],char,bad):
             solveFor.append(char)
