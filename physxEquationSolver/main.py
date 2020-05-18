@@ -219,14 +219,15 @@ while True:
     val = input(know+" = ")
     arr.append([know,val])
 
-# for e in equations:
-#     for c in arr:
-#         e[1] = replaceExclude(e[1],c[0],c[1],bad)
-#         e[0] = replaceExclude(e[0],c[0],c[1],bad)
 
 # os.system('cls')
 equations2 = generator(equations,available)
 formulas2 = generator(formulas,available)
+
+for e in equations2:
+    for c in arr:
+        e[1] = replaceExclude(e[1],c[0],c[1],bad)
+        e[0] = replaceExclude(e[0],c[0],c[1],bad)
 
 # print(equations2)
 # print(formulas2)
