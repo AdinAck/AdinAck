@@ -22,7 +22,7 @@ def permutate(arr,available):
         if "complexes" in final[1].lower() or "emptyset" in final[1].lower() or "conditionset" in final[1].lower():
             break
         if "complement" in final[1].lower():
-            print("stuff:",final)
+            # print("stuff:",final)
             final[1] = final[1].split("Complement(FiniteSet(")[1]
             for i in range(len(final[1])):
                 if final[1][i] == ",":
@@ -95,6 +95,9 @@ def generator(equations,available):
     # print("after:",equations)
     equations.reverse()
     # print(equations)
+    for i in range(len(equations)-1,-1,-1):
+        if equations[i][1] == "0":
+            equations.pop(i)
     return equations
 
 def replaceExclude(string, name, val, bad):
@@ -117,7 +120,7 @@ def replaceExclude(string, name, val, bad):
                     isRightGood = True
             else: isRightGood = True
             if isLeftGood and isRightGood:
-                print("Replacing",name,"with",val,"in",string)
+                # print("Replacing",name,"with",val,"in",string)
                 out = out[:i]+val+out[i+length:]
                 i += len(val)
             # print(string[i:i+length],isLeftGood,isRightGood)
