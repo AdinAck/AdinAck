@@ -1,2 +1,798 @@
-P*V = Nm*kB*T
-K = (3*kB*T)/2
+['F', 'a*m']
+['m', 'F/a']
+['a', 'F/m']
+['F', 'W/d']
+['W', 'F*d']
+['d', 'W/F']
+['W', 'P*t']
+['P', 'W/t']
+['t', 'W/P']
+['a', '(vf - vi)/t']
+['t', '(vf - vi)/a']
+['vf', 'a*t + vi']
+['vi', '-a*t + vf']
+['a', '2.0*(dx - t*vi)/t**2']
+['a', '(vf**2 - vi**2)/(2*dx)']
+['a', 'v**2/r']
+['v', 'sqrt(a*r)']
+stuff: ['r', 'Complement(FiniteSet(v**2/a), FiniteSet(0))']
+['r', 'v**2/a']
+['m', 'p/v']
+['v', 'p/m']
+['p', 'm*v']
+['F', 'dp/dt']
+['m', '2.0*K/v**2']
+['v', '-1.4142135623731*sqrt(K/m)']
+['K', '0.5*m*v**2']
+['F', 'W/(d*cos(theta))']
+['F', 'tau/(r*sin(theta))']
+['F', 'k*x']
+['x', 'F/k']
+['k', 'F/x']
+['x', '-1.4142135623731*sqrt(U/k)']
+['k', '2.0*U/x**2']
+['U', '0.5*k*x**2']
+['m', 'dU/(dy*g)']
+stuff: ['f', 'Complement(FiniteSet(1/T), FiniteSet(0))']
+['f', '1/T']
+['T', '1/f']
+['m', 'T**2*k/(4*pi**2)']
+['F', 'G*m1*m2/r**2']
+['F', 'g*m']
+stuff: ['m', 'Complement(FiniteSet(F/g), FiniteSet(0))']
+['m', 'F/g']
+['F', 'q1*q2/(4*pi*epsilon0*r**2)']
+stuff: ['r', 'Complement(FiniteSet(-sqrt(q1*q2/(F*epsilon0))/(2*sqrt(pi)), sqrt(q1*q2/(F*epsilon0))/(2*sqrt(pi))), FiniteSet(0))']
+['r', '-sqrt(q1*q2/(F*epsilon0))/(2*sqrt(pi))']
+['F', 'E*q']
+['E', 'F/q']
+stuff: ['q', 'Complement(FiniteSet(F*exp(-1)), FiniteSet(0))']
+['q', 'F*exp(-1)']
+stuff: ['r', 'Complement(FiniteSet(-sqrt(q/epsilon0)*exp(-1/2)/(2*sqrt(pi)), sqrt(q/epsilon0)*exp(-1/2)/(2*sqrt(pi))), FiniteSet(0))']
+['r', '-sqrt(q/epsilon0)*exp(-1/2)/(2*sqrt(pi))']
+stuff: ['r', 'Complement(FiniteSet(q/(4*pi*V*epsilon0)), FiniteSet(0))']
+['r', 'q/(4*pi*V*epsilon0)']
+['P', '-R']
+['F', 'B*q*v*sin(theta)']
+['F', 'I*B*l*sin(theta)']
+['v', 'V/(B*l)']
+['l', 'V/(B*v)']
+['V', 'B*l*v']
+['B', 'V/(l*v)']
+['m', 'V*rho']
+['F', 'A*P']
+['P', 'F/A']
+stuff: ['A', 'Complement(FiniteSet(F/P), FiniteSet(0))']
+['A', 'F/P']
+['F', 'V*g*rho']
+['P', 'R*T*n/V']
+['T', 'P*V/(R*n)']
+['V', 'R*T*n/P']
+['R', 'P*V/(T*n)']
+['n', 'P*V/(R*T)']
+['K', '3*T*kB/2']
+['W', '-P*dV']
+['W', '-Q + dU']
+['m', 'k*x/a']
+['a', 'k*x/m']
+['x', 'a*m/k']
+['k', 'a*m/x']
+['m', 'V*g*rho/a']
+['a', 'V*g*rho/m']
+['m', 'W/(a*d)']
+['a', 'W/(d*m)']
+['W', 'a*d*m']
+stuff: ['d', 'Complement(FiniteSet(W/(a*m)), FiniteSet(0))']
+['d', 'W/(a*m)']
+['W', 'd*dp/dt']
+stuff: ['d', 'Complement(FiniteSet(W*dt/dp), FiniteSet(0))']
+['d', 'W*dt/dp']
+['m', 'G*m1*m2/(g*r**2)']
+stuff: ['r', 'Complement(FiniteSet(sqrt(G*m1*m2/(g*m)), -sqrt(G*m1*m2/(g*m))), FiniteSet(0))']
+['r', 'sqrt(G*m1*m2/(g*m))']
+['m1', 'g*m*r**2/(G*m2)']
+['m2', 'g*m*r**2/(G*m1)']
+['m', 'q1*q2/(4*pi*epsilon0*g*r**2)']
+stuff: ['r', 'Complement(FiniteSet(-sqrt(q1*q2/(epsilon0*g*m))/(2*sqrt(pi)), sqrt(q1*q2/(epsilon0*g*m))/(2*sqrt(pi))), FiniteSet(0))']
+['r', '-sqrt(q1*q2/(epsilon0*g*m))/(2*sqrt(pi))']
+stuff: ['r', 'Complement(FiniteSet(-sqrt(q1*q2/(epsilon0*q))*exp(-1/2)/(2*sqrt(pi)), sqrt(q1*q2/(epsilon0*q))*exp(-1/2)/(2*sqrt(pi))), FiniteSet(0))']
+['r', '-sqrt(q1*q2/(epsilon0*q))*exp(-1/2)/(2*sqrt(pi))']
+['P', 'V*g*rho/A']
+['F', 'P*t/d']
+['d', 'P*t/F']
+['P', 'F*d/t']
+['t', 'F*d/P']
+['F', 'P*t/(d*cos(theta))']
+['F', '-P*dV/(d*cos(theta))']
+['a', '0']
+['t', '0']
+['F', 'm*v**2/r']
+stuff: ['m', 'Complement(FiniteSet(F*r/v**2), FiniteSet(0))']
+['m', 'F*r/v**2']
+['v', 'sqrt(F*r/m)']
+stuff: ['r', 'Complement(FiniteSet(m*v**2/F), FiniteSet(0))']
+['r', 'm*v**2/F']
+['F', 'm*(vf - vi)/t']
+stuff: ['m', 'Complement(FiniteSet(F*t/(vf - vi)), FiniteSet(0))']
+['m', 'F*t/(vf - vi)']
+stuff: ['t', 'Complement(FiniteSet(m*(vf - vi)/F), FiniteSet(0))']
+['t', 'm*(vf - vi)/F']
+['vf', 'F*t/m + vi']
+['vi', '-F*t/m + vf']
+['m', '1.0*I*omega**2/v**2']
+['m', '3.0*T*kB/v**2']
+['v', '-1.73205080756888*sqrt(T*kB/m)']
+['m', '3.0*T*kB/v**2']
+['v', '-1.73205080756888*sqrt(T*kB/m)']
+['F', '0']
+['F', 'A*k*cos(2*pi*f*t)']
+['F', '-1.4142135623731*k*sqrt(U/k)']
+['m', 'dV*q/(dy*g)']
+['W', '-Q + dV*q']
+['m', 'k/(4*pi**2*f**2)']
+['m', 'k*l/g']
+['P', '2*pi*R*n*sqrt(l/g)/V']
+['m', 'k/omega**2']
+['m', 'G*m1*m2/(a*r**2)']
+['a', 'G*m1*m2/(m*r**2)']
+stuff: ['r', 'Complement(FiniteSet(sqrt(G*m1*m2/(a*m)), -sqrt(G*m1*m2/(a*m))), FiniteSet(0))']
+['r', 'sqrt(G*m1*m2/(a*m))']
+['m1', 'a*m*r**2/(G*m2)']
+['m2', 'a*m*r**2/(G*m1)']
+stuff: ['r', 'Complement(FiniteSet(-sqrt(q1*q2/(epsilon0*k*x))/(2*sqrt(pi)), sqrt(q1*q2/(epsilon0*k*x))/(2*sqrt(pi))), FiniteSet(0))']
+['r', '-sqrt(q1*q2/(epsilon0*k*x))/(2*sqrt(pi))']
+['F', 'q**2/(4*pi*epsilon0*r**2)']
+stuff: ['r', 'Complement(FiniteSet(-q*sqrt(1/(F*epsilon0))/(2*sqrt(pi)), q*sqrt(1/(F*epsilon0))/(2*sqrt(pi))), FiniteSet(0))']
+['r', '-q*sqrt(1/(F*epsilon0))/(2*sqrt(pi))']
+stuff: ['P', 'Complement(FiniteSet(R*T*n/(B*l*v)), FiniteSet(0))']
+['P', 'R*T*n/(B*l*v)']
+['v', 'R*T*n/(B*P*l)']
+['T', 'B*P*l*v/(R*n)']
+['l', 'R*T*n/(B*P*v)']
+['R', 'B*P*l*v/(T*n)']
+['B', 'R*T*n/(P*l*v)']
+['n', 'B*P*l*v/(R*T)']
+['F', 'dV*q/dR']
+stuff: ['r', 'Complement(FiniteSet(-sqrt(A*q/Q)/(2*sqrt(pi)), sqrt(A*q/Q)/(2*sqrt(pi))), FiniteSet(0))']
+['r', '-sqrt(A*q/Q)/(2*sqrt(pi))']
+['P', 'T*l*n*rho/(A*V)']
+['F', 'A*dV**2/R']
+['F', 'A*W/t']
+['W', 'F*t/A']
+stuff: ['t', 'Complement(FiniteSet(A*W/F), FiniteSet(0))']
+['t', 'A*W/F']
+stuff: ['A', 'Complement(FiniteSet(F*t/W), FiniteSet(0))']
+['A', 'F*t/W']
+['W', '-R*t']
+stuff: ['t', 'Complement(FiniteSet(-W/R), FiniteSet(0))']
+['t', '-W/R']
+['R', '-W/t']
+['T', '-V/n']
+stuff: ['V', 'Complement(FiniteSet(-T*n), FiniteSet(0))']
+['V', '-T*n']
+['R', '0']
+['n', '-V/T']
+['v', 'q/(4*pi*B*epsilon0*l*r)']
+stuff: ['r', 'Complement(FiniteSet(q/(4*pi*B*epsilon0*l*v)), FiniteSet(0))']
+['r', 'q/(4*pi*B*epsilon0*l*v)']
+['F', '-A*R']
+stuff: ['A', 'Complement(FiniteSet(-F/R), FiniteSet(0))']
+['A', '-F/R']
+['m', '3.0*T*kB/v**2']
+['v', '-1.73205080756888*sqrt(T*kB/m)']
+['m', '(Q + W)/(dy*g)']
+['W', '-Q + dy*g*m']
+['m', 'I*B*l*sin(theta)/a']
+['a', 'I*B*l*sin(theta)/m']
+['F', 'a*p/v']
+stuff: ['a', 'Complement(FiniteSet(F*v/p), FiniteSet(0))']
+['a', 'F*v/p']
+stuff: ['v', 'Complement(FiniteSet(a*p/F), FiniteSet(0))']
+['v', 'a*p/F']
+['p', 'F*v/a']
+stuff: ['v', 'Complement(FiniteSet(2.0*K/p), FiniteSet(0))']
+['v', '2.0*K/p']
+['p', '2.0*K/v']
+['K', '0.5*p*v']
+['F', 'T**2*g*k/(4*pi**2)']
+['F', 'V*g*rho']
+['W', 'V*d*g*rho']
+stuff: ['d', 'Complement(FiniteSet(W/(V*g*rho)), FiniteSet(0))']
+['d', 'W/(V*g*rho)']
+['W', 'dV**2*t/R']
+stuff: ['a', 'Complement(FiniteSet(P*(vf - vi)/W), FiniteSet(0))']
+['a', 'P*(vf - vi)/W']
+['W', 'P*(vf - vi)/a']
+stuff: ['P', 'Complement(FiniteSet(W*a/(vf - vi)), FiniteSet(0))']
+['P', 'W*a/(vf - vi)']
+['vf', 'vi + W*a/P']
+['vi', 'vf - W*a/P']
+stuff: ['t', 'Complement(FiniteSet(r*(vf - vi)/v**2), FiniteSet(0))']
+['t', 'r*(vf - vi)/v**2']
+['vf', 'vi + t*v**2/r']
+['vi', 'vf - t*v**2/r']
+['v', 'sqrt(r*(vf - vi)/t)']
+stuff: ['r', 'Complement(FiniteSet(t*v**2/(vf - vi)), FiniteSet(0))']
+['r', 't*v**2/(vf - vi)']
+['F', 'm*(2.0*dx - 2.0*t*vi)/t**2']
+stuff: ['m', 'Complement(FiniteSet(F*t**2/(2.0*dx - 2.0*t*vi)), FiniteSet(0))']
+['m', 'F*t**2/(2.0*dx - 2.0*t*vi)']
+stuff: ['m', 'Complement(FiniteSet(p/sqrt(a*r)), FiniteSet(0))']
+['m', 'p/sqrt(a*r)']
+['a', 'p**2/(m**2*r)']
+stuff: ['m', 'Complement(FiniteSet(0.499999999999996*p**2/K), FiniteSet(0))']
+['m', '0.499999999999996*p**2/K']
+stuff: ['m', 'Complement(FiniteSet(2.00000000000001*B**2*K*l**2/V**2), FiniteSet(0))']
+['m', '2.00000000000001*B**2*K*l**2/V**2']
+stuff: ['F', 'Complement(FiniteSet(a**2*q1*q2/(4*pi*epsilon0*v**4)), FiniteSet(0))']
+['F', 'a**2*q1*q2/(4*pi*epsilon0*v**4)']
+stuff: ['a', 'Complement(FiniteSet(-2*sqrt(pi)*v**2/sqrt(q1*q2/(F*epsilon0))), FiniteSet(0))']
+['a', '-2*sqrt(pi)*v**2/sqrt(q1*q2/(F*epsilon0))']
+stuff: ['F', 'Complement(FiniteSet(E*q1*q2/q), FiniteSet(0))']
+['F', 'E*q1*q2/q']
+['m', 'dp/(a*dt)']
+['a', 'dp/(dt*m)']
+['F', '2.0*K*a/v**2']
+stuff: ['a', 'Complement(FiniteSet(0.5*F*v**2/K), FiniteSet(0))']
+['a', '0.5*F*v**2/K']
+stuff: ['v', 'Complement(FiniteSet(-1.4142135623731*sqrt(K*a/F), 1.4142135623731*sqrt(K*a/F)), FiniteSet(0))']
+['v', '-1.4142135623731*sqrt(K*a/F)']
+['K', '0.5*F*v**2/a']
+stuff: ['m', 'Complement(FiniteSet(2.00000000000001*K/(a*r)), FiniteSet(0))']
+['m', '2.00000000000001*K/(a*r)']
+['m', '1.0*I*omega**2/v**2']
+['F', 'A*k*cos(omega*t)']
+['F', '2.0*U/x']
+stuff: ['x', 'Complement(FiniteSet(2.0*U/F), FiniteSet(0))']
+['x', '2.0*U/F']
+['U', '0.5*F*x']
+stuff: ['v', 'Complement(FiniteSet(-2.82842712474619*pi*sqrt(K/k)/T, 2.82842712474619*pi*sqrt(K/k)/T), FiniteSet(0))']
+['v', '-2.82842712474619*pi*sqrt(K/k)/T']
+['m', 'tau/(g*r*sin(theta))']
+['F', 'dU/dy']
+['m', 'E*q/g']
+['E', 'g*m/q']
+['q', 'g*m*exp(-1)']
+stuff: ['a', 'Complement(FiniteSet(-2*sqrt(pi)*v**2*exp(1/2)/sqrt(q/epsilon0)), FiniteSet(0))']
+['a', '-2*sqrt(pi)*v**2*exp(1/2)/sqrt(q/epsilon0)']
+stuff: ['F', 'Complement(FiniteSet(4*pi*V**2*epsilon0*q1*q2/q**2), FiniteSet(0))']
+['F', '4*pi*V**2*epsilon0*q1*q2/q**2']
+['F', '-A*R']
+stuff: ['A', 'Complement(FiniteSet(-F/R), FiniteSet(0))']
+['A', '-F/R']
+['R', '-F/A']
+stuff: ['m', 'Complement(FiniteSet(B*l*p/V), FiniteSet(0))']
+['m', 'B*l*p/V']
+['p', 'V*m/(B*l)']
+stuff: ['l', 'Complement(FiniteSet(V*m/(B*p)), FiniteSet(0))']
+['l', 'V*m/(B*p)']
+['V', 'B*l*p/m']
+stuff: ['B', 'Complement(FiniteSet(V*m/(l*p)), FiniteSet(0))']
+['B', 'V*m/(l*p)']
+['W', 'R*T*n*t/V']
+stuff: ['t', 'Complement(FiniteSet(V*W/(R*T*n)), FiniteSet(0))']
+['t', 'V*W/(R*T*n)']
+['T', 'V*W/(R*n*t)']
+stuff: ['V', 'Complement(FiniteSet(R*T*n*t/W), FiniteSet(0))']
+['V', 'R*T*n*t/W']
+['R', 'V*W/(T*n*t)']
+['n', 'V*W/(R*T*t)']
+['m', 'P**2*V**2*k/(4*pi**2*R**2*n**2)']
+['P', '2*pi*R*n*sqrt(m/k)/V']
+['F', '-(Q - dU)/(d*cos(theta))']
+['F', 'a*m']
+['m', 'F/a']
+['a', 'F/m']
+['F', 'W/d']
+['W', 'F*d']
+['d', 'W/F']
+['W', 'P*t']
+['P', 'W/t']
+['t', 'W/P']
+['a', '(vf - vi)/t']
+['t', '(vf - vi)/a']
+['vf', 'a*t + vi']
+['vi', '-a*t + vf']
+['a', '2.0*(dx - t*vi)/t**2']
+['a', '(vf**2 - vi**2)/(2*dx)']
+['a', 'v**2/r']
+['v', 'sqrt(a*r)']
+stuff: ['r', 'Complement(FiniteSet(v**2/a), FiniteSet(0))']
+['r', 'v**2/a']
+['m', 'p/v']
+['v', 'p/m']
+['p', 'm*v']
+['F', 'dp/dt']
+['m', '2.0*K/v**2']
+['v', '-1.4142135623731*sqrt(K/m)']
+['K', '0.5*m*v**2']
+['F', 'W/(d*cos(theta))']
+['F', 'tau/(r*sin(theta))']
+['F', 'k*x']
+['x', 'F/k']
+['k', 'F/x']
+['x', '-1.4142135623731*sqrt(U/k)']
+['k', '2.0*U/x**2']
+['U', '0.5*k*x**2']
+['m', 'dU/(dy*g)']
+stuff: ['f', 'Complement(FiniteSet(1/T), FiniteSet(0))']
+['f', '1/T']
+['T', '1/f']
+['m', 'T**2*k/(4*pi**2)']
+['F', 'G*m1*m2/r**2']
+['F', 'g*m']
+stuff: ['m', 'Complement(FiniteSet(F/g), FiniteSet(0))']
+['m', 'F/g']
+['F', 'q1*q2/(4*pi*epsilon0*r**2)']
+stuff: ['r', 'Complement(FiniteSet(-sqrt(q1*q2/(F*epsilon0))/(2*sqrt(pi)), sqrt(q1*q2/(F*epsilon0))/(2*sqrt(pi))), FiniteSet(0))']
+['r', '-sqrt(q1*q2/(F*epsilon0))/(2*sqrt(pi))']
+['F', 'E*q']
+['E', 'F/q']
+stuff: ['q', 'Complement(FiniteSet(F*exp(-1)), FiniteSet(0))']
+['q', 'F*exp(-1)']
+stuff: ['r', 'Complement(FiniteSet(-sqrt(q/epsilon0)*exp(-1/2)/(2*sqrt(pi)), sqrt(q/epsilon0)*exp(-1/2)/(2*sqrt(pi))), FiniteSet(0))']
+['r', '-sqrt(q/epsilon0)*exp(-1/2)/(2*sqrt(pi))']
+stuff: ['r', 'Complement(FiniteSet(q/(4*pi*V*epsilon0)), FiniteSet(0))']
+['r', 'q/(4*pi*V*epsilon0)']
+['P', '-R']
+['F', 'B*q*v*sin(theta)']
+['F', 'I*B*l*sin(theta)']
+['v', 'V/(B*l)']
+['l', 'V/(B*v)']
+['V', 'B*l*v']
+['B', 'V/(l*v)']
+['m', 'V*rho']
+['F', 'A*P']
+['P', 'F/A']
+stuff: ['A', 'Complement(FiniteSet(F/P), FiniteSet(0))']
+['A', 'F/P']
+['F', 'V*g*rho']
+['P', 'R*T*n/V']
+['T', 'P*V/(R*n)']
+['V', 'R*T*n/P']
+['R', 'P*V/(T*n)']
+['n', 'P*V/(R*T)']
+['K', '3*T*kB/2']
+['W', '-P*dV']
+['W', '-Q + dU']
+['m', 'k*x/a']
+['a', 'k*x/m']
+['x', 'a*m/k']
+['k', 'a*m/x']
+['m', 'V*g*rho/a']
+['a', 'V*g*rho/m']
+['m', 'W/(a*d)']
+['a', 'W/(d*m)']
+['W', 'a*d*m']
+stuff: ['d', 'Complement(FiniteSet(W/(a*m)), FiniteSet(0))']
+['d', 'W/(a*m)']
+['W', 'd*dp/dt']
+stuff: ['d', 'Complement(FiniteSet(W*dt/dp), FiniteSet(0))']
+['d', 'W*dt/dp']
+['m', 'G*m1*m2/(g*r**2)']
+stuff: ['r', 'Complement(FiniteSet(sqrt(G*m1*m2/(g*m)), -sqrt(G*m1*m2/(g*m))), FiniteSet(0))']
+['r', 'sqrt(G*m1*m2/(g*m))']
+['m1', 'g*m*r**2/(G*m2)']
+['m2', 'g*m*r**2/(G*m1)']
+['m', 'q1*q2/(4*pi*epsilon0*g*r**2)']
+stuff: ['r', 'Complement(FiniteSet(-sqrt(q1*q2/(epsilon0*g*m))/(2*sqrt(pi)), sqrt(q1*q2/(epsilon0*g*m))/(2*sqrt(pi))), FiniteSet(0))']
+['r', '-sqrt(q1*q2/(epsilon0*g*m))/(2*sqrt(pi))']
+stuff: ['r', 'Complement(FiniteSet(-sqrt(q1*q2/(epsilon0*q))*exp(-1/2)/(2*sqrt(pi)), sqrt(q1*q2/(epsilon0*q))*exp(-1/2)/(2*sqrt(pi))), FiniteSet(0))']
+['r', '-sqrt(q1*q2/(epsilon0*q))*exp(-1/2)/(2*sqrt(pi))']
+['P', 'V*g*rho/A']
+['F', 'P*t/d']
+['d', 'P*t/F']
+['P', 'F*d/t']
+['t', 'F*d/P']
+['F', 'P*t/(d*cos(theta))']
+['F', '-P*dV/(d*cos(theta))']
+['a', '0']
+['t', '0']
+['F', 'm*v**2/r']
+stuff: ['m', 'Complement(FiniteSet(F*r/v**2), FiniteSet(0))']
+['m', 'F*r/v**2']
+['v', 'sqrt(F*r/m)']
+stuff: ['r', 'Complement(FiniteSet(m*v**2/F), FiniteSet(0))']
+['r', 'm*v**2/F']
+['F', 'm*(vf - vi)/t']
+stuff: ['m', 'Complement(FiniteSet(F*t/(vf - vi)), FiniteSet(0))']
+['m', 'F*t/(vf - vi)']
+stuff: ['t', 'Complement(FiniteSet(m*(vf - vi)/F), FiniteSet(0))']
+['t', 'm*(vf - vi)/F']
+['vf', 'F*t/m + vi']
+['vi', '-F*t/m + vf']
+['m', '1.0*I*omega**2/v**2']
+['m', '3.0*T*kB/v**2']
+['v', '-1.73205080756888*sqrt(T*kB/m)']
+['m', '3.0*T*kB/v**2']
+['v', '-1.73205080756888*sqrt(T*kB/m)']
+['F', '0']
+['F', 'A*k*cos(2*pi*f*t)']
+['F', '-1.4142135623731*k*sqrt(U/k)']
+['m', 'dV*q/(dy*g)']
+['W', '-Q + dV*q']
+['m', 'k/(4*pi**2*f**2)']
+['m', 'k*l/g']
+['P', '2*pi*R*n*sqrt(l/g)/V']
+['m', 'k/omega**2']
+['m', 'G*m1*m2/(a*r**2)']
+['a', 'G*m1*m2/(m*r**2)']
+stuff: ['r', 'Complement(FiniteSet(sqrt(G*m1*m2/(a*m)), -sqrt(G*m1*m2/(a*m))), FiniteSet(0))']
+['r', 'sqrt(G*m1*m2/(a*m))']
+['m1', 'a*m*r**2/(G*m2)']
+['m2', 'a*m*r**2/(G*m1)']
+stuff: ['r', 'Complement(FiniteSet(-sqrt(q1*q2/(epsilon0*k*x))/(2*sqrt(pi)), sqrt(q1*q2/(epsilon0*k*x))/(2*sqrt(pi))), FiniteSet(0))']
+['r', '-sqrt(q1*q2/(epsilon0*k*x))/(2*sqrt(pi))']
+['F', 'q**2/(4*pi*epsilon0*r**2)']
+stuff: ['r', 'Complement(FiniteSet(-q*sqrt(1/(F*epsilon0))/(2*sqrt(pi)), q*sqrt(1/(F*epsilon0))/(2*sqrt(pi))), FiniteSet(0))']
+['r', '-q*sqrt(1/(F*epsilon0))/(2*sqrt(pi))']
+stuff: ['P', 'Complement(FiniteSet(R*T*n/(B*l*v)), FiniteSet(0))']
+['P', 'R*T*n/(B*l*v)']
+['v', 'R*T*n/(B*P*l)']
+['T', 'B*P*l*v/(R*n)']
+['l', 'R*T*n/(B*P*v)']
+['R', 'B*P*l*v/(T*n)']
+['B', 'R*T*n/(P*l*v)']
+['n', 'B*P*l*v/(R*T)']
+['F', 'dV*q/dR']
+stuff: ['r', 'Complement(FiniteSet(-sqrt(A*q/Q)/(2*sqrt(pi)), sqrt(A*q/Q)/(2*sqrt(pi))), FiniteSet(0))']
+['r', '-sqrt(A*q/Q)/(2*sqrt(pi))']
+['P', 'T*l*n*rho/(A*V)']
+['F', 'A*dV**2/R']
+['F', 'A*W/t']
+['W', 'F*t/A']
+stuff: ['t', 'Complement(FiniteSet(A*W/F), FiniteSet(0))']
+['t', 'A*W/F']
+stuff: ['A', 'Complement(FiniteSet(F*t/W), FiniteSet(0))']
+['A', 'F*t/W']
+['W', '-R*t']
+stuff: ['t', 'Complement(FiniteSet(-W/R), FiniteSet(0))']
+['t', '-W/R']
+['R', '-W/t']
+['T', '-V/n']
+stuff: ['V', 'Complement(FiniteSet(-T*n), FiniteSet(0))']
+['V', '-T*n']
+['R', '0']
+['n', '-V/T']
+['v', 'q/(4*pi*B*epsilon0*l*r)']
+stuff: ['r', 'Complement(FiniteSet(q/(4*pi*B*epsilon0*l*v)), FiniteSet(0))']
+['r', 'q/(4*pi*B*epsilon0*l*v)']
+['F', '-A*R']
+stuff: ['A', 'Complement(FiniteSet(-F/R), FiniteSet(0))']
+['A', '-F/R']
+['m', '3.0*T*kB/v**2']
+['v', '-1.73205080756888*sqrt(T*kB/m)']
+['m', '(Q + W)/(dy*g)']
+['W', '-Q + dy*g*m']
+['m', 'I*B*l*sin(theta)/a']
+['a', 'I*B*l*sin(theta)/m']
+['F', 'a*p/v']
+stuff: ['a', 'Complement(FiniteSet(F*v/p), FiniteSet(0))']
+['a', 'F*v/p']
+stuff: ['v', 'Complement(FiniteSet(a*p/F), FiniteSet(0))']
+['v', 'a*p/F']
+['p', 'F*v/a']
+stuff: ['v', 'Complement(FiniteSet(2.0*K/p), FiniteSet(0))']
+['v', '2.0*K/p']
+['p', '2.0*K/v']
+['K', '0.5*p*v']
+['F', 'T**2*g*k/(4*pi**2)']
+['F', 'V*g*rho']
+['W', 'V*d*g*rho']
+stuff: ['d', 'Complement(FiniteSet(W/(V*g*rho)), FiniteSet(0))']
+['d', 'W/(V*g*rho)']
+['W', 'dV**2*t/R']
+stuff: ['a', 'Complement(FiniteSet(P*(vf - vi)/W), FiniteSet(0))']
+['a', 'P*(vf - vi)/W']
+['W', 'P*(vf - vi)/a']
+stuff: ['P', 'Complement(FiniteSet(W*a/(vf - vi)), FiniteSet(0))']
+['P', 'W*a/(vf - vi)']
+['vf', 'vi + W*a/P']
+['vi', 'vf - W*a/P']
+stuff: ['t', 'Complement(FiniteSet(r*(vf - vi)/v**2), FiniteSet(0))']
+['t', 'r*(vf - vi)/v**2']
+['vf', 'vi + t*v**2/r']
+['vi', 'vf - t*v**2/r']
+['v', 'sqrt(r*(vf - vi)/t)']
+stuff: ['r', 'Complement(FiniteSet(t*v**2/(vf - vi)), FiniteSet(0))']
+['r', 't*v**2/(vf - vi)']
+['F', 'm*(2.0*dx - 2.0*t*vi)/t**2']
+stuff: ['m', 'Complement(FiniteSet(F*t**2/(2.0*dx - 2.0*t*vi)), FiniteSet(0))']
+['m', 'F*t**2/(2.0*dx - 2.0*t*vi)']
+stuff: ['m', 'Complement(FiniteSet(p/sqrt(a*r)), FiniteSet(0))']
+['m', 'p/sqrt(a*r)']
+['a', 'p**2/(m**2*r)']
+stuff: ['m', 'Complement(FiniteSet(0.499999999999996*p**2/K), FiniteSet(0))']
+['m', '0.499999999999996*p**2/K']
+stuff: ['m', 'Complement(FiniteSet(2.00000000000001*B**2*K*l**2/V**2), FiniteSet(0))']
+['m', '2.00000000000001*B**2*K*l**2/V**2']
+stuff: ['F', 'Complement(FiniteSet(a**2*q1*q2/(4*pi*epsilon0*v**4)), FiniteSet(0))']
+['F', 'a**2*q1*q2/(4*pi*epsilon0*v**4)']
+stuff: ['a', 'Complement(FiniteSet(-2*sqrt(pi)*v**2/sqrt(q1*q2/(F*epsilon0))), FiniteSet(0))']
+['a', '-2*sqrt(pi)*v**2/sqrt(q1*q2/(F*epsilon0))']
+stuff: ['F', 'Complement(FiniteSet(E*q1*q2/q), FiniteSet(0))']
+['F', 'E*q1*q2/q']
+['m', 'dp/(a*dt)']
+['a', 'dp/(dt*m)']
+['F', '2.0*K*a/v**2']
+stuff: ['a', 'Complement(FiniteSet(0.5*F*v**2/K), FiniteSet(0))']
+['a', '0.5*F*v**2/K']
+stuff: ['v', 'Complement(FiniteSet(-1.4142135623731*sqrt(K*a/F), 1.4142135623731*sqrt(K*a/F)), FiniteSet(0))']
+['v', '-1.4142135623731*sqrt(K*a/F)']
+['K', '0.5*F*v**2/a']
+stuff: ['m', 'Complement(FiniteSet(2.00000000000001*K/(a*r)), FiniteSet(0))']
+['m', '2.00000000000001*K/(a*r)']
+['m', '1.0*I*omega**2/v**2']
+['F', 'A*k*cos(omega*t)']
+['F', '2.0*U/x']
+stuff: ['x', 'Complement(FiniteSet(2.0*U/F), FiniteSet(0))']
+['x', '2.0*U/F']
+['U', '0.5*F*x']
+stuff: ['v', 'Complement(FiniteSet(-2.82842712474619*pi*sqrt(K/k)/T, 2.82842712474619*pi*sqrt(K/k)/T), FiniteSet(0))']
+['v', '-2.82842712474619*pi*sqrt(K/k)/T']
+['m', 'tau/(g*r*sin(theta))']
+['F', 'dU/dy']
+['m', 'E*q/g']
+['E', 'g*m/q']
+['q', 'g*m*exp(-1)']
+stuff: ['a', 'Complement(FiniteSet(-2*sqrt(pi)*v**2*exp(1/2)/sqrt(q/epsilon0)), FiniteSet(0))']
+['a', '-2*sqrt(pi)*v**2*exp(1/2)/sqrt(q/epsilon0)']
+stuff: ['F', 'Complement(FiniteSet(4*pi*V**2*epsilon0*q1*q2/q**2), FiniteSet(0))']
+['F', '4*pi*V**2*epsilon0*q1*q2/q**2']
+['F', '-A*R']
+stuff: ['A', 'Complement(FiniteSet(-F/R), FiniteSet(0))']
+['A', '-F/R']
+['R', '-F/A']
+stuff: ['m', 'Complement(FiniteSet(B*l*p/V), FiniteSet(0))']
+['m', 'B*l*p/V']
+['p', 'V*m/(B*l)']
+stuff: ['l', 'Complement(FiniteSet(V*m/(B*p)), FiniteSet(0))']
+['l', 'V*m/(B*p)']
+['V', 'B*l*p/m']
+stuff: ['B', 'Complement(FiniteSet(V*m/(l*p)), FiniteSet(0))']
+['B', 'V*m/(l*p)']
+['W', 'R*T*n*t/V']
+stuff: ['t', 'Complement(FiniteSet(V*W/(R*T*n)), FiniteSet(0))']
+['t', 'V*W/(R*T*n)']
+['T', 'V*W/(R*n*t)']
+stuff: ['V', 'Complement(FiniteSet(R*T*n*t/W), FiniteSet(0))']
+['V', 'R*T*n*t/W']
+['R', 'V*W/(T*n*t)']
+['n', 'V*W/(R*T*t)']
+['m', 'P**2*V**2*k/(4*pi**2*R**2*n**2)']
+['P', '2*pi*R*n*sqrt(m/k)/V']
+['F', '-(Q - dU)/(d*cos(theta))']
+Replacing pi with 3.14159 in 2*pi*R*n*sqrt(m/k)/V
+Replacing pi with 3.14159 in P**2*V**2*k/(4*pi**2*R**2*n**2)
+Replacing pi with 3.14159 in 4*pi*V**2*epsilon0*q1*q2/q**2
+Replacing epsilon0 with 8.85*10**(-12) in 4*3.14159*V**2*epsilon0*q1*q2/q**2
+Replacing pi with 3.14159 in -2*sqrt(pi)*v**2*exp(1/2)/sqrt(q/epsilon0)
+Replacing epsilon0 with 8.85*10**(-12) in -2*sqrt(3.14159)*v**2*exp(1/2)/sqrt(q/epsilon0)
+Replacing g with 9.8 in g*m*exp(-1)
+Replacing g with 9.8 in g*m/q
+Replacing g with 9.8 in E*q/g
+Replacing g with 9.8 in tau/(g*r*sin(theta))
+Replacing pi with 3.14159 in -2.82842712474619*pi*sqrt(K/k)/T
+Replacing pi with 3.14159 in -2*sqrt(pi)*v**2/sqrt(q1*q2/(F*epsilon0))
+Replacing epsilon0 with 8.85*10**(-12) in -2*sqrt(3.14159)*v**2/sqrt(q1*q2/(F*epsilon0))
+Replacing pi with 3.14159 in a**2*q1*q2/(4*pi*epsilon0*v**4)
+Replacing epsilon0 with 8.85*10**(-12) in a**2*q1*q2/(4*3.14159*epsilon0*v**4)
+Replacing g with 9.8 in W/(V*g*rho)
+Replacing g with 9.8 in V*d*g*rho
+Replacing g with 9.8 in V*g*rho
+Replacing pi with 3.14159 in T**2*g*k/(4*pi**2)
+Replacing g with 9.8 in T**2*g*k/(4*3.14159**2)
+Replacing g with 9.8 in -Q + dy*g*m
+Replacing g with 9.8 in (Q + W)/(dy*g)
+Replacing kB with 1.38*10**(-23) in -1.73205080756888*sqrt(T*kB/m)
+Replacing kB with 1.38*10**(-23) in 3.0*T*kB/v**2
+Replacing pi with 3.14159 in q/(4*pi*B*epsilon0*l*v)
+Replacing epsilon0 with 8.85*10**(-12) in q/(4*3.14159*B*epsilon0*l*v)
+Replacing pi with 3.14159 in q/(4*pi*B*epsilon0*l*r)
+Replacing epsilon0 with 8.85*10**(-12) in q/(4*3.14159*B*epsilon0*l*r)
+Replacing pi with 3.14159 in -sqrt(A*q/Q)/(2*sqrt(pi))
+Replacing pi with 3.14159 in -q*sqrt(1/(F*epsilon0))/(2*sqrt(pi))
+Replacing epsilon0 with 8.85*10**(-12) in -q*sqrt(1/(F*epsilon0))/(2*sqrt(3.14159))
+Replacing pi with 3.14159 in q**2/(4*pi*epsilon0*r**2)
+Replacing epsilon0 with 8.85*10**(-12) in q**2/(4*3.14159*epsilon0*r**2)
+Replacing pi with 3.14159 in -sqrt(q1*q2/(epsilon0*k*x))/(2*sqrt(pi))
+Replacing epsilon0 with 8.85*10**(-12) in -sqrt(q1*q2/(epsilon0*k*x))/(2*sqrt(3.14159))
+Replacing G with 6.67*10**(-11) in a*m*r**2/(G*m1)
+Replacing G with 6.67*10**(-11) in a*m*r**2/(G*m2)
+Replacing G with 6.67*10**(-11) in sqrt(G*m1*m2/(a*m))
+Replacing G with 6.67*10**(-11) in G*m1*m2/(m*r**2)
+Replacing G with 6.67*10**(-11) in G*m1*m2/(a*r**2)
+Replacing pi with 3.14159 in 2*pi*R*n*sqrt(l/g)/V
+Replacing g with 9.8 in 2*3.14159*R*n*sqrt(l/g)/V
+Replacing g with 9.8 in k*l/g
+Replacing pi with 3.14159 in k/(4*pi**2*f**2)
+Replacing g with 9.8 in dV*q/(dy*g)
+Replacing pi with 3.14159 in A*k*cos(2*pi*f*t)
+Replacing kB with 1.38*10**(-23) in -1.73205080756888*sqrt(T*kB/m)
+Replacing kB with 1.38*10**(-23) in 3.0*T*kB/v**2
+Replacing kB with 1.38*10**(-23) in -1.73205080756888*sqrt(T*kB/m)
+Replacing kB with 1.38*10**(-23) in 3.0*T*kB/v**2
+Replacing g with 9.8 in V*g*rho/A
+Replacing pi with 3.14159 in -sqrt(q1*q2/(epsilon0*q))*exp(-1/2)/(2*sqrt(pi))
+Replacing epsilon0 with 8.85*10**(-12) in -sqrt(q1*q2/(epsilon0*q))*exp(-1/2)/(2*sqrt(3.14159))
+Replacing pi with 3.14159 in -sqrt(q1*q2/(epsilon0*g*m))/(2*sqrt(pi))
+Replacing g with 9.8 in -sqrt(q1*q2/(epsilon0*g*m))/(2*sqrt(3.14159))
+Replacing epsilon0 with 8.85*10**(-12) in -sqrt(q1*q2/(epsilon0*9.8*m))/(2*sqrt(3.14159))
+Replacing pi with 3.14159 in q1*q2/(4*pi*epsilon0*g*r**2)
+Replacing g with 9.8 in q1*q2/(4*3.14159*epsilon0*g*r**2)
+Replacing epsilon0 with 8.85*10**(-12) in q1*q2/(4*3.14159*epsilon0*9.8*r**2)
+Replacing G with 6.67*10**(-11) in g*m*r**2/(G*m1)
+Replacing g with 9.8 in g*m*r**2/(6.67*10**(-11)*m1)
+Replacing G with 6.67*10**(-11) in g*m*r**2/(G*m2)
+Replacing g with 9.8 in g*m*r**2/(6.67*10**(-11)*m2)
+Replacing G with 6.67*10**(-11) in sqrt(G*m1*m2/(g*m))
+Replacing g with 9.8 in sqrt(6.67*10**(-11)*m1*m2/(g*m))
+Replacing G with 6.67*10**(-11) in G*m1*m2/(g*r**2)
+Replacing g with 9.8 in 6.67*10**(-11)*m1*m2/(g*r**2)
+Replacing g with 9.8 in V*g*rho/m
+Replacing g with 9.8 in V*g*rho/a
+Replacing kB with 1.38*10**(-23) in 3*T*kB/2
+Replacing g with 9.8 in V*g*rho
+Replacing pi with 3.14159 in q/(4*pi*V*epsilon0)
+Replacing epsilon0 with 8.85*10**(-12) in q/(4*3.14159*V*epsilon0)
+Replacing pi with 3.14159 in -sqrt(q/epsilon0)*exp(-1/2)/(2*sqrt(pi))
+Replacing epsilon0 with 8.85*10**(-12) in -sqrt(q/epsilon0)*exp(-1/2)/(2*sqrt(3.14159))
+Replacing pi with 3.14159 in -sqrt(q1*q2/(F*epsilon0))/(2*sqrt(pi))
+Replacing epsilon0 with 8.85*10**(-12) in -sqrt(q1*q2/(F*epsilon0))/(2*sqrt(3.14159))
+Replacing pi with 3.14159 in q1*q2/(4*pi*epsilon0*r**2)
+Replacing epsilon0 with 8.85*10**(-12) in q1*q2/(4*3.14159*epsilon0*r**2)
+Replacing g with 9.8 in F/g
+Replacing g with 9.8 in g*m
+Replacing G with 6.67*10**(-11) in G*m1*m2/r**2
+Replacing pi with 3.14159 in T**2*k/(4*pi**2)
+Replacing g with 9.8 in dU/(dy*g)
+Replacing kB with 1.38*10**(-23) in (3*kB*T)/2
+Replacing kB with 1.38*10**(-23) in Nm*kB*T
+Replacing g with 9.8 in P2 + rho*g*y2 + .5*(rho*v2**2)
+Replacing g with 9.8 in P1 + rho*g*y1 + .5*(rho*v1**2)
+Replacing g with 9.8 in rho*V*g
+Replacing g with 9.8 in rho*g*h
+Replacing pi with 3.14159 in (mu*I)/(2*pi*r)
+Replacing mu with 4*pi in (mu*I)/(2*3.14159*r)
+Replacing epsilon0 with 8.85*10**(-12) in Q/(epsilon0*A)
+Replacing epsilon0 with 8.85*10**(-12) in kappa*epsilon0*(A/d)
+Replacing pi with 3.14159 in q/(4*pi*epsilon0*r)
+Replacing epsilon0 with 8.85*10**(-12) in q/(4*3.14159*epsilon0*r)
+Replacing pi with 3.14159 in q/(4*pi*epsilon0*r**2)
+Replacing epsilon0 with 8.85*10**(-12) in q/(4*3.14159*epsilon0*r**2)
+Replacing pi with 3.14159 in (q1*q2)/(4*pi*epsilon0*r**2)
+Replacing epsilon0 with 8.85*10**(-12) in (q1*q2)/(4*3.14159*epsilon0*r**2)
+Replacing G with 6.67*10**(-11) in (-G*m1*m2)/r
+Replacing g with 9.8 in g
+Replacing G with 6.67*10**(-11) in (G*m1*m2)/r**2
+Replacing pi with 3.14159 in 2*pi*(l/g)**(1/2)
+Replacing g with 9.8 in 2*3.14159*(l/g)**(1/2)
+Replacing pi with 3.14159 in 2*pi*(m/k)**(1/2)
+Replacing pi with 3.14159 in (2*pi)/omega
+Replacing g with 9.8 in m*g*dy
+Replacing pi with 3.14159 in A*cos(2*pi*f*t)
+Using equation: a = 0
+Plugging in values: a = 0
+a = 0
+Replacing a with 0 in m*a
+Replacing a with 0 in vi + a*t
+Replacing a with 0 in vi*t + .5*a*t**2
+Replacing a with 0 in vi**2 + 2*a*dx
+Replacing a with 0 in a*m
+Replacing a with 0 in F/a
+Replacing a with 0 in (vf - vi)/a
+Replacing a with 0 in a*t + vi
+Replacing a with 0 in -a*t + vf
+Replacing a with 0 in sqrt(a*r)
+Replacing a with 0 in v**2/a
+Replacing a with 0 in k*x/a
+Replacing a with 0 in a*m/k
+Replacing a with 0 in a*m/x
+Replacing a with 0 in V*9.8*rho/a
+Replacing a with 0 in W/(a*d)
+Replacing a with 0 in a*d*m
+Replacing a with 0 in W/(a*m)
+Replacing a with 0 in 6.67*10**(-11)*m1*m2/(a*r**2)
+Replacing a with 0 in sqrt(6.67*10**(-11)*m1*m2/(a*m))
+Replacing a with 0 in a*m*r**2/(6.67*10**(-11)*m2)
+Replacing a with 0 in a*m*r**2/(6.67*10**(-11)*m1)
+Replacing a with 0 in I*B*l*sin(theta)/a
+Replacing a with 0 in a*p/v
+Replacing a with 0 in a*p/F
+Replacing a with 0 in F*v/a
+Replacing a with 0 in P*(vf - vi)/a
+Replacing a with 0 in W*a/(vf - vi)
+Replacing a with 0 in vi + W*a/P
+Replacing a with 0 in vf - W*a/P
+Replacing a with 0 in p/sqrt(a*r)
+Replacing a with 0 in a**2*q1*q2/(4*3.14159*8.85*10**(-12)*v**4)
+Replacing a with 0 in dp/(a*dt)
+Replacing a with 0 in 2.0*K*a/v**2
+Replacing a with 0 in -1.4142135623731*sqrt(K*a/F)
+Replacing a with 0 in 0.5*F*v**2/a
+Replacing a with 0 in 2.00000000000001*K/(a*r)
+Using equation: t = 0
+Plugging in values: t = 0
+t = 0
+Replacing t with 0 in P*t
+Replacing t with 0 in vi + 0*t
+Replacing t with 0 in vi*t + .5*0*t**2
+Replacing t with 0 in vi*t + .5*0*t**2
+Replacing t with 0 in omega*t + .5*alpha*t**2
+Replacing t with 0 in omega*t + .5*alpha*t**2
+Replacing t with 0 in alpha*t
+Replacing t with 0 in A*cos(omega*t)
+Replacing t with 0 in A*cos(2*3.14159*f*t)
+Replacing t with 0 in W/t
+Replacing t with 0 in 0*t + vi
+Replacing t with 0 in -0*t + vf
+Replacing t with 0 in P*t/d
+Replacing t with 0 in P*t/F
+Replacing t with 0 in F*d/t
+Replacing t with 0 in P*t/(d*cos(theta))
+Replacing t with 0 in m*(vf - vi)/t
+Replacing t with 0 in F*t/(vf - vi)
+Replacing t with 0 in F*t/m + vi
+Replacing t with 0 in -F*t/m + vf
+Replacing t with 0 in A*k*cos(2*3.14159*f*t)
+Replacing t with 0 in A*W/t
+Replacing t with 0 in F*t/A
+Replacing t with 0 in F*t/W
+Replacing t with 0 in -R*t
+Replacing t with 0 in -W/t
+Replacing t with 0 in dV**2*t/R
+Replacing t with 0 in vi + t*v**2/r
+Replacing t with 0 in vf - t*v**2/r
+Replacing t with 0 in sqrt(r*(vf - vi)/t)
+Replacing t with 0 in t*v**2/(vf - vi)
+Replacing t with 0 in m*(2.0*dx - 2.0*t*vi)/t**2
+Replacing t with 0 in m*(2.0*dx - 2.0*t*vi)/t**2
+Replacing t with 0 in F*t**2/(2.0*dx - 2.0*t*vi)
+Replacing t with 0 in F*t**2/(2.0*dx - 2.0*t*vi)
+Replacing t with 0 in A*k*cos(omega*t)
+Replacing t with 0 in R*T*n*t/V
+Replacing t with 0 in V*W/(R*n*t)
+Replacing t with 0 in R*T*n*t/W
+Replacing t with 0 in V*W/(T*n*t)
+Replacing t with 0 in V*W/(R*T*t)
+Using equation: F = 0
+Plugging in values: F = 0
+F = 0
+Replacing F with 0 in F*d
+Replacing F with 0 in F*dt
+Replacing F with 0 in F*d*cos(theta)
+Replacing F with 0 in r*F*sin(theta)
+Replacing F with 0 in F/m
+Replacing F with 0 in F/q
+Replacing F with 0 in F/A
+Replacing F with 0 in F/0
+Replacing F with 0 in W/F
+Replacing F with 0 in F/k
+Replacing F with 0 in F/x
+Replacing F with 0 in F/9.8
+Replacing F with 0 in -sqrt(q1*q2/(F*8.85*10**(-12)))/(2*sqrt(3.14159))
+Replacing F with 0 in F*exp(-1)
+Replacing F with 0 in F/P
+Replacing F with 0 in P*0/F
+Replacing F with 0 in F*d/0
+Replacing F with 0 in F*r/v**2
+Replacing F with 0 in sqrt(F*r/m)
+Replacing F with 0 in m*v**2/F
+Replacing F with 0 in F*0/(vf - vi)
+Replacing F with 0 in F*0/m + vi
+Replacing F with 0 in -F*0/m + vf
+Replacing F with 0 in -q*sqrt(1/(F*8.85*10**(-12)))/(2*sqrt(3.14159))
+Replacing F with 0 in F*0/A
+Replacing F with 0 in F*0/W
+Replacing F with 0 in -F/R
+Replacing F with 0 in 0*p/F
+Replacing F with 0 in F*v/0
+Replacing F with 0 in F*0**2/(2.0*dx - 2.0*0*vi)
+Replacing F with 0 in -1.4142135623731*sqrt(K*0/F)
+Replacing F with 0 in 0.5*F*v**2/0
+Replacing F with 0 in 2.0*U/F
+Replacing F with 0 in 0.5*F*x
+Replacing F with 0 in -F/R
+Replacing F with 0 in -F/A
+Using equation: m = F/a
+Plugging in values: m = 0/0

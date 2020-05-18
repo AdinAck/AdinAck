@@ -16,19 +16,29 @@ def permutate(arr,available):
             solveFor.append(char)
     for char in solveFor:
         # print("Solving",arr,"for",char)
-        print("-".join([arr[1],arr[0]]))
+        # print("-".join([arr[1],arr[0]]))
         final = [char,list(nonlinsolve([parse_expr("-".join([arr[1],arr[0]]))],(parse_expr(char))))[0][0]]
         final[1] = str(final[1])
         if "complexes" in final[1].lower() or "emptyset" in final[1].lower() or "conditionset" in final[1].lower():
             break
         if "complement" in final[1].lower():
-            final[1] = final[1].split("Complement(FiniteSet")[1]
+            print("stuff:",final)
+            final[1] = final[1].split("Complement(FiniteSet(")[1]
             for i in range(len(final[1])):
                 if final[1][i] == ",":
                     end = i
                     break
             final[1] = final[1][:end]
-        # print(final)
+        l = 0
+        r = 0
+        for char in final[1]:
+            if char == "(":
+                l += 1
+            elif char == ")":
+                r += 1
+        if l < r:
+            final[1] = final[1][:-1]
+        print(final)
         out.append(final)
 
     return out
@@ -164,7 +174,7 @@ def gigaMegaSolver(equations,formulas,available,done=[]):
             gigaMegaSolver(equations,formulas,available,done)
         i -= 1
 
-f = open("equations.txt", "r")
+f = open("equationsold.txt", "r")
 temp = f.readlines()
 equations = [i[:-1].split(" = ") for i in temp]
 formulas = [i[:-1].split(" = ") for i in temp]
@@ -199,7 +209,7 @@ for char in thing:
             if removeChar in char:
                 available.remove(char)
 
-f = open("constants.txt", "r")
+f = open("constantsold.txt", "r")
 arr = [i[:-1].split(" = ") for i in f.readlines()]
 f.close()
 
