@@ -12,7 +12,7 @@ def permutate(arr,available):
     out = []
     solveFor = []
     for char in available:
-        if char in arr[0] or char in arr[1]:
+        if findVar(arr[0],char,bad) or findVar(arr[1],char,bad):
             solveFor.append(char)
     for char in solveFor:
         print("Solving",arr,"for",char)
