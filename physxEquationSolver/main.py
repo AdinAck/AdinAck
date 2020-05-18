@@ -15,8 +15,7 @@ def permutate(arr,available):
         if char in arr[0] or char in arr[1]:
             solveFor.append(char)
     for char in solveFor:
-        # print("Solving",arr,"for",char)
-        # print("-".join([arr[1],arr[0]]))
+        print("Solving",arr,"for",char)
         final = [char,list(nonlinsolve([parse_expr("-".join([arr[1],arr[0]]))],(parse_expr(char))))[0][0]]
         final[1] = str(final[1])
         if "complexes" in final[1].lower() or "emptyset" in final[1].lower() or "conditionset" in final[1].lower():
@@ -255,7 +254,7 @@ def run():
         val = input(know+" = ")
         arr.append([know,val])
 
-    os.system('cls')
+    # os.system('cls')
     equations2 = np.load("permutated.npy").tolist()
     formulas2 = np.load("permutated.npy").tolist()
 
