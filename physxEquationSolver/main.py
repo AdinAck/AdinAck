@@ -12,6 +12,8 @@ formulas =  [["a","v/t"], ["F","m*a"], ["v","d/t"], ["W", "F*d"], ["W", "P*t"]]
 # equations = convert()
 # formulas = convert()
 
+#test comment fdfdsasdf
+
 def permutate(arr,available):
     out = []
     solveFor = []
