@@ -139,7 +139,7 @@ t = theta*5
 4. remove "var = val" from list. X
 5. repeat X
 """
-def gigaMegaSolver(equations,formulas,available,done=[]):
+def gigaMegaSolver(equations,formulas,available,bad,done=[]):
     i = -1
     while -i < len(equations):
         if len(equations) == 0 or len(formulas) == 0:
@@ -174,80 +174,96 @@ def gigaMegaSolver(equations,formulas,available,done=[]):
                     # Replace all occasions of newly solved variable with value.
                     equations[j][1] = replaceExclude(equations[j][1],name,val,bad)
             # Recurse
-            gigaMegaSolver(equations,formulas,available,done)
+            gigaMegaSolver(equations,formulas,available,bad,done)
         i -= 1
 
-f = open("equationsold.txt", "r")
-temp = f.readlines()
-equations = [i[:-1].split(" = ") for i in temp]
-formulas = [i[:-1].split(" = ") for i in temp]
+def build(equationsFileName,constantsFileName):
+    f = open(equationsFileName, "r")
+    temp = f.readlines()
+    equations = [i[:-1].split(" = ") for i in temp]
 
-f.close()
-temp = " ".join(np.asarray(equations).flatten())
+    f.close()
+    temp = " ".join(np.asarray(equations).flatten())
 
-bad = [" ", "*", "/", "+", "-", "(", ")"]
-remove = ["sin", "cos", "sqrt"]
-available = []
-i = 0
-while i < len(temp):
-    for j in range(i+1,len(temp)):
-        if temp[i] not in bad and temp[j] in bad:
-            # print(temp[i:j])
-            available.append(temp[i:j])
-            i += len(temp[i:j])
-            break
-        if temp[j] in bad:
-            break
-    i += 1
+    bad = [" ", "*", "/", "+", "-", "(", ")"]
+    remove = ["sin", "cos", "sqrt"]
+    available = []
+    i = 0
+    while i < len(temp):
+        for j in range(i+1,len(temp)):
+            if temp[i] not in bad and temp[j] in bad:
+                # print(temp[i:j])
+                available.append(temp[i:j])
+                i += len(temp[i:j])
+                break
+            if temp[j] in bad:
+                break
+        i += 1
 
-available = list(dict.fromkeys(available))
-thing = list(available)
-thing.reverse()
-for char in thing:
-    try:
-        float(char)
-        available.remove(char)
-    except:
-        for removeChar in remove:
-            if removeChar in char:
-                available.remove(char)
+    available = list(dict.fromkeys(available))
+    thing = list(available)
+    thing.reverse()
+    for char in thing:
+        try:
+            float(char)
+            available.remove(char)
+        except:
+            for removeChar in remove:
+                if removeChar in char:
+                    available.remove(char)
 
-f = open("constantsold.txt", "r")
-arr = [i[:-1].split(" = ") for i in f.readlines()]
-f.close()
+    f = open(constantsFileName, "r")
+    arr = [i[:-1].split(" = ") for i in f.readlines()]
+    f.close()
 
-for c in arr:
-    if c[0] in available:
-        available.remove(c[0])
-
-print("Available variables:",available)
-
-# print("test:",replaceExclude("-1.73205080756888*sqrt(T*kB/m)", "kB", "[]", bad))
-
-while True:
-    stuff = input("var name? ")
-    if stuff == "end":
-        break
-    if stuff not in available:
-        print("Variable is not available for evaluation.")
-        continue
-    know = stuff
-    val = input(know+" = ")
-    arr.append([know,val])
-
-
-
-
-# os.system('cls')
-equations2 = generator(equations,available)
-formulas2 = generator(formulas,available)
-
-for e in equations2:
     for c in arr:
-        e[1] = replaceExclude(e[1],c[0],c[1],bad)
-        e[0] = replaceExclude(e[0],c[0],c[1],bad)
+        if c[0] in available:
+            available.remove(c[0])
 
-# print(equations2)
-# print(formulas2)
+    print("Permutating...")
 
-gigaMegaSolver(equations2,formulas2,available)
+    yes = generator(equations,available)
+
+    for e in yes:
+        for c in arr:
+            e[1] = replaceExclude(e[1],c[0],c[1],bad)
+            e[0] = replaceExclude(e[0],c[0],c[1],bad)
+
+    np.save("bad",bad)
+    np.save("arr",arr)
+    np.save("permutated",yes)
+    np.save("available",available)
+    print("Done.")
+
+def run():
+    bad = np.load("bad.npy").tolist()
+    arr = np.load("arr.npy").tolist()
+    available = np.load("available.npy").tolist()
+    print("Available variables:",available)
+
+    while True:
+        stuff = input("var name? ")
+        if stuff == "end":
+            break
+        if stuff not in available:
+            print("Variable is not available for evaluation.")
+            continue
+        know = stuff
+        val = input(know+" = ")
+        arr.append([know,val])
+
+    os.system('cls')
+    equations2 = np.load("permutated.npy").tolist()
+    formulas2 = np.load("permutated.npy").tolist()
+
+    for e in equations2:
+        for c in arr:
+            e[1] = replaceExclude(e[1],c[0],c[1],bad)
+            e[0] = replaceExclude(e[0],c[0],c[1],bad)
+
+    for e in formulas2:
+        for c in arr:
+            e[1] = replaceExclude(e[1],c[0],c[1],bad)
+            e[0] = replaceExclude(e[0],c[0],c[1],bad)
+
+    gigaMegaSolver(equations2,formulas2,available,bad)
