@@ -96,7 +96,9 @@ def generator(equations,available):
     equations.reverse()
     # print(equations)
     for i in range(len(equations)-1,-1,-1):
+        # print("testing 0:",equations[i])
         if equations[i][1] == "0":
+            # print("0:",equations[i])
             equations.pop(i)
     return equations
 
@@ -155,14 +157,15 @@ def gigaMegaSolver(equations,formulas,available,done=[]):
         # ====================
         # If none, solve variable equal to expression.
         if n == 0:
-            if formulas[i][0]: # If variable being solved for was not provided in beginning.
+            val = str(eval(equations[i][1])) # Evaluate
+            name = equations[i][0]
+            if name in available: # If variable being solved for was not provided in beginning.
                 # print("eq:",equations)
                 # print("form:",formulas)
                 print("Using equation:",formulas[i][0],"=",formulas[i][1])
                 print("Plugging in values:",equations[i][0],"=",equations[i][1])
-            val = str(eval(equations[i][1])) # Evaluate
-            name = equations[i][0] # Change known variable to solved variable for next iteration.
-            print(name,"=",val)
+             # Change known variable to solved variable for next iteration.
+                print(name,"=",val)
             done.append(name) # Add solved variable to list of solved variables.
             # ====================
             # Remove all occasions of "newly solved variable = something".
