@@ -228,6 +228,9 @@ while True:
     stuff = input("var name? ")
     if stuff == "end":
         break
+    if stuff not in available:
+        print("Variable is not available for evaluation.")
+        continue
     know = stuff
     val = input(know+" = ")
     arr.append([know,val])
