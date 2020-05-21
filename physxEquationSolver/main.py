@@ -203,7 +203,7 @@ def gigaMegaSolver(equations,formulas,available,bad,done=[]):
             gigaMegaSolver(equations,formulas,available,bad,done)
         i -= 1
 
-def build(equationsFileName,constantsFileName):
+def build(equationsFileName,constantsFileName,outputName):
     f = open(equationsFileName, "r")
     temp = f.readlines()
     equations = [i[:-1].split(" = ") for i in temp]
@@ -255,16 +255,17 @@ def build(equationsFileName,constantsFileName):
             e[1] = replaceExclude(e[1],c[0],c[1],bad)
             e[0] = replaceExclude(e[0],c[0],c[1],bad)
 
-    np.save("bad",bad)
-    np.save("arr",arr)
-    np.save("permutated",yes)
-    np.save("available",available)
+    os.system("md "+outputName)
+    np.save(outputName+"/bad",bad)
+    np.save(outputName+"/arr",arr)
+    np.save(outputName+"/permutated",yes)
+    np.save(outputName+"/available",available)
     print("Done.")
 
-def run():
-    bad = np.load("bad.npy").tolist()
-    arr = np.load("arr.npy").tolist()
-    available = np.load("available.npy").tolist()
+def run(directory):
+    bad = np.load(directory+"/bad.npy").tolist()
+    arr = np.load(directory+"/arr.npy").tolist()
+    available = np.load(directory+"/available.npy").tolist()
     print("Available variables:",available)
 
     while True:
@@ -279,8 +280,8 @@ def run():
         arr.append([know,val])
 
     # os.system('cls')
-    equations2 = np.load("permutated.npy").tolist()
-    formulas2 = np.load("permutated.npy").tolist().copy()
+    equations2 = np.load(directory+"/permutated.npy").tolist()
+    formulas2 = np.load(directory+"/permutated.npy").tolist().copy()
 
     for e in equations2:
         for c in arr:
