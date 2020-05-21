@@ -280,7 +280,7 @@ def run():
 
     # os.system('cls')
     equations2 = np.load("permutated.npy").tolist()
-    formulas2 = np.load("permutated.npy").tolist()
+    formulas2 = np.load("permutated.npy").tolist().copy()
 
     for e in equations2:
         for c in arr:
