@@ -13,29 +13,32 @@ def permutate(arr,available):
             solveFor.append(char)
     for char in solveFor:
         print("Solving",arr,"for",char)
-        final = [char,list(nonlinsolve([parse_expr("-".join([arr[1],arr[0]]))],(parse_expr(char))))[0][0]]
-        final[1] = str(final[1])
-        if "complexes" in final[1].lower() or "emptyset" in final[1].lower() or "conditionset" in final[1].lower():
-            break
-        if "complement" in final[1].lower():
-            # print("stuff:",final)
-            final[1] = final[1].split("Complement(FiniteSet(")[1]
-            for i in range(len(final[1])):
-                if final[1][i] == ",":
-                    end = i
-                    break
-            final[1] = final[1][:end]
-        l = 0
-        r = 0
-        for char in final[1]:
-            if char == "(":
-                l += 1
-            elif char == ")":
-                r += 1
-        if l < r:
-            final[1] = final[1][:-1]
-        print(final)
-        out.append(final)
+        yeeet = list(iter(nonlinsolve([parse_expr("-".join([arr[1],arr[0]]))],(parse_expr(char)))))
+        print(yeeet)
+        print(len(yeeet))
+
+        try:
+            while len(yeeet) == 1:
+                yeeet = list(iter(yeeet[0]))
+            raise
+        except:
+            try:
+                while len(yeeet) > 1:
+                    yeeet = yeeet[0]
+            except:
+                pass
+
+
+        print(yeeet)
+        for i in yeeet:
+            temp = str(i)
+            temp = temp.replace(",","")
+            out.append([char,temp])
+            print([char,temp])
+        # final = [char,list(nonlinsolve([parse_expr("-".join([arr[1],arr[0]]))],(parse_expr(char))))[0][0]]
+
+        # print(final)
+        # out.append(final)
 
     return out
 
