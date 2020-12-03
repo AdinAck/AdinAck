@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "M:\GitHub\AdinAck\mindnightAI\game.py", line 186, in <module>
+    while epochs < 500000:
+NameError: name 'epochs' is not defined

@@ -1,0 +1,5 @@
+1
+Traceback (most recent call last):
+  File "M:\GitHub\AdinAck\mindnightAI\game 2.py", line 262, in <module>
+    wandb.log({"Agent Winners": winnersA, "Hacker winners": winnersH, "Hammer": game.hammer, "Pass count": game.passCount}, step=epochs)
+AttributeError: 'Game' object has no attribute 'hammer'

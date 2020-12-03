@@ -1,0 +1,5 @@
+1
+Traceback (most recent call last):
+  File "M:\GitHub\AdinAck\mindnightAI\game 2.py", line 278, in <module>
+    hackers[tmpArrA[winnersA+i]].params["W1"] = np.copy(np.multiply(hackers[tmpArrA[parents[i]]].params["W1"],1.0+np.random.randn(*hackers[tmpArrA[parents[i]]].params["W1"].shape)/50))
+IndexError: list index out of range

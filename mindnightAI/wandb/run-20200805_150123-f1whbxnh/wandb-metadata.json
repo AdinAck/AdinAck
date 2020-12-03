@@ -1,0 +1,18 @@
+{
+    "root": "M:\\GitHub\\AdinAck\\mindnightAI",
+    "program": "M:\\GitHub\\AdinAck\\mindnightAI\\game 2.py",
+    "startedAt": "2020-08-05T22:01:23.727640",
+    "host": "DESKTOP-26M60A5",
+    "username": "rhett",
+    "executable": "C:\\Users\\rhett\\AppData\\Local\\Programs\\Python\\Python38-32\\python.exe",
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.8.5",
+    "cpu_count": 12,
+    "args": [],
+    "state": "failed",
+    "jobType": null,
+    "mode": "run",
+    "project": "mindnight",
+    "heartbeatAt": "2020-08-05T22:01:29.265398",
+    "exitcode": 1
+}

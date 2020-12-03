@@ -1,3 +1,0 @@
-vf = vi + a*t
-dx = vi*t + .5*a*t**2
-vf**2 = vi**2 + 2*a*dx

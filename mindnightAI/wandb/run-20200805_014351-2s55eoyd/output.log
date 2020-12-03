@@ -1,0 +1,7 @@
+1
+Traceback (most recent call last):
+  File "M:\GitHub\AdinAck\mindnightAI\game 2.py", line 242, in <module>
+    outcome = game.run()
+  File "M:\GitHub\AdinAck\mindnightAI\game 2.py", line 74, in run
+    if hammerCount > 4:
+UnboundLocalError: local variable 'hammerCount' referenced before assignment

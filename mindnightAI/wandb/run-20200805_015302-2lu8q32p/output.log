@@ -1,0 +1,9 @@
+1
+Traceback (most recent call last):
+  File "M:\GitHub\AdinAck\mindnightAI\game 2.py", line 242, in <module>
+    outcome = game.run()
+  File "M:\GitHub\AdinAck\mindnightAI\game 2.py", line 99, in run
+    thought = self.players[self.playerChoosing].think(input)
+  File "M:\GitHub\AdinAck\mindnightAI\game 2.py", line 40, in think
+    C1 = np.maximum(0,X.dot(self.params["W1"])) #plus self.params[b1]
+ValueError: shapes (88,) and (101,200) not aligned: 88 (dim 0) != 101 (dim 0)

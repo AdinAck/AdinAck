@@ -1,0 +1,149 @@
+Hackers are 1 2 
+Player 1 proposed [4 3].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 2 proposed [2 3].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 3 proposed [3 2].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 4 proposed [4 1].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 0 proposed [3 4].
+Player 1 voted True.
+Player 2 voted False.
+Node 0 secured
+Player 1 proposed [3 4 2].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 2 proposed [3 4 2].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 3 passed.
+Player 4 proposed [1 4 0].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 0 proposed [3 4 0].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 1 proposed [3 4 2].
+Player 1 voted True.
+Player 2 voted False.
+Node 1 hacked with 1 hackers.
+Player 2 proposed [3 2].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 3 passed.
+Player 4 proposed [4 1].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 0 proposed [3 4].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 1 passed.
+Player 2 proposed [3 4].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 3 proposed [3 2].
+Player 1 voted True.
+Player 2 voted False.
+Node 2 hacked with 1 hackers.
+Player 4 proposed [1 4 0].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 0 proposed [3 4 0].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 1 passed.
+Player 2 proposed [2 0 4].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 3 proposed [3 2 4].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 4 proposed [4 1 0].
+Player 1 voted True.
+Player 2 voted False.
+Node 3 secured
+Player 0 passed.
+Player 1 passed.
+Player 2 proposed [0 2 3].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 3 proposed [3 2 4].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 4 proposed [1 4 0].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 0 proposed [3 4 0].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 1 passed.
+Player 2 proposed [2 4 3].
+Player 1 voted True.
+Player 2 voted False.
+Node 4 hacked with 1 hackers.
+Hackers win!

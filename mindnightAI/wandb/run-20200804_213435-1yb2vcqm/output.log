@@ -1,0 +1,59 @@
+Hackers are 1 2 
+
+
+
+
+
+
+
+Player 1 proposed [4 0].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted True.
+Player 4 voted False.
+Player 2 proposed [2 0].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted True.
+Player 4 voted False.
+Player 3 proposed [3 0].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted True.
+Player 4 voted False.
+Player 4 passed.
+Player 0 passed.
+Player 1 proposed [4 1].
+Player 0 voted True.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted True.
+Player 4 voted False.
+Node 0 hacked with 1 hackers.
+Player 2 proposed [0 4 3].
+Player 0 voted True.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted True.
+Player 4 voted False.
+Node 1 secured
+Player 3 proposed [4 3].
+Player 0 voted True.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted True.
+Player 4 voted False.
+Node 2 secured
+Player 4 passed.
+Player 0 passed.
+Player 1 proposed [4 0 3].
+Player 0 voted True.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted True.
+Player 4 voted False.
+Node 3 secured
+Agents win!

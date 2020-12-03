@@ -1,0 +1,5 @@
+1
+Traceback (most recent call last):
+  File "M:\GitHub\AdinAck\mindnightAI\game 2.py", line 262, in <module>
+    wandb.log({"Winners": winners, "Hammer": game.hammer, "Pass count": game.passCount}, step=epochs)
+NameError: name 'winners' is not defined

@@ -1,30 +1,27 @@
-# 2D array of variable size populated w/ integers counting up (ascending)
-# organized like:
-
-import numpy as np
-
-n = 4
-a = np.zeros((n**2))
-
-print(a)
-
-def f(x):
-    if x % 2 == 0:
-        return x//2
-    else:
-        return -(x-((x-1)//2))
-
-for i in range(np.size(a)):
-    print("place: " + str(f(i)) + "Number: " + str(i))
-    a[f(i)] = i
-a.shape = (n,n)
-print(a)
-
-################################################################################
-
-a = np.zeroes((n**2))
-
-def f(x):
-    if
-
-for i in range(np.size(a)):
+d = {
+    "disks": {
+        "xvda": {
+            "size": "2.00 GiB",
+            "size_bytes": 2147483648
+        },
+        "xvdb": {
+            "size": "70.00 GiB",
+            "size_bytes": 75161927680
+        },
+        "xvdc": {
+            "size": "32.00 GiB",
+            "size_bytes": 34359738368
+        },
+        "xvdf": {
+            "size": "8.14 TiB",
+            "size_bytes": 8950024649728
+        },
+        "xvdg": {
+            "size": "3.00 TiB",
+            "size_bytes": 3298534883328
+        }
+    }
+}
+["disks", ":", "size"]
+for key in d["disks"]:
+    print(d["disks"][key]["size"])

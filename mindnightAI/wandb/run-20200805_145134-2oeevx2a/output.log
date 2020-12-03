@@ -1,0 +1,8 @@
+1
+Traceback (most recent call last):
+  File "M:\GitHub\AdinAck\mindnightAI\game 2.py", line 278, in <module>
+    hackers[tmpArrA[winnersA+i]].params["W1"] = np.multiply(np.copy(hackers[tmpArrA[parents[i]]].params["W1"],(1.0+np.random.randn(*hackers[tmpArrA[parents[i]]].params["W1"].shape)/50)))
+  File "<__array_function__ internals>", line 5, in copy
+  File "C:\Users\rhett\AppData\Local\Programs\Python\Python38-32\lib\site-packages\numpy\lib\function_base.py", line 792, in copy
+    return array(a, order=order, subok=subok, copy=True)
+TypeError: order must be str, not numpy.ndarray

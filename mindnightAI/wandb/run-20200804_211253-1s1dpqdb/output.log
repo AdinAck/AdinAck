@@ -1,0 +1,34 @@
+Hackers are 0 4 
+Player 1 proposed [4 3].
+Player 0 voted False.
+Player 1 voted False.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 2 proposed [3 4].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 3 passed.
+Player 4 proposed [4 1].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 0 passed.
+Player 1 proposed [3 4].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Player 2 proposed [3 4].
+Player 0 voted False.
+Player 1 voted True.
+Player 2 voted False.
+Player 3 voted False.
+Player 4 voted True.
+Hackers win!
