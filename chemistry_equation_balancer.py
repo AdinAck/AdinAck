@@ -99,7 +99,7 @@ print("Equation: " +
             f'{i}{j}' for i, j in zip(ca[k], [
                 "".join([
                     f'{key}{val}' if val != '1' else f'{key}' for key, val in i.items()
-                ]) for i in componentsDict[0]
+                ]) for i in componentsDict[k]
             ])
         ]) for k in [0,1]
     ]))
