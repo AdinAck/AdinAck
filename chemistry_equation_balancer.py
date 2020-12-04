@@ -109,8 +109,8 @@ print(f"Coeffs: {coeffs}")
 print("Equation: " +
     " => ".join([
         " + ".join([
-            f'{k}{j.replace(" ", "")}' if k != 1 else j.replace(" ", "") for j,k in zip(i, coeffs)
-        ]) for i in componentsOriginal
+            f'{k}{j.replace(" ", "")}' if k != 1 else j.replace(" ", "") for j,k in zip(i, ca[n])
+        ]) for i,n in zip(componentsOriginal, [0,1])
     ])
 )
 print("\n/////////////////////////")
