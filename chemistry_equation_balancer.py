@@ -1,6 +1,11 @@
 import numpy as np
 from sympy import *
 
+def printMsg(msg):
+    print("\n/////////////////////////\n")
+    print(msg)
+    print("\n/////////////////////////\n")
+
 eq = input("Equation: ")
 
 exclude = [str(i) for i in range(10)]+[")", "+", "=", ">", " "]
@@ -15,6 +20,10 @@ for i in n:
                 eq = eq[:i] + " " + eq[i:]
                 n += [len(eq)-1]
 
+for char in eq:
+    if not ((char.isdigit() or char.isalpha()) or char in "() +=>"):
+        printMsg(f"Equation is not formatted correctly:\nIllegal characters ({char}).")
+        exit()
 
 components = [i.split(" + ") for i in eq.split(' => ')]
 componentsOriginal = [i.split(" + ") for i in eq.split(' => ')]
@@ -73,7 +82,11 @@ for i in range(len(components)):
                     num = 1
                 else:
                     num = int(num)
-                componentsDict[i][j][e] += num
+                try:
+                    componentsDict[i][j][e] += num
+                except KeyError:
+                    printMsg("Equation is not formatted correctly:\nPreexisting coefficients.")
+                    exit()
 
 matrix = np.zeros((len(alphabet),len(components[0])+len(components[1])))
 
@@ -93,7 +106,11 @@ m2 = -m2
 
 matrix = np.concatenate((m1,m2), axis=1)
 
-ns = [i[0] for i in np.array(Matrix([[int(j) for j in list(i)] for i in matrix]).nullspace())[0]]
+try:
+    ns = [i[0] for i in np.array(Matrix([[int(j) for j in list(i)] for i in matrix]).nullspace())[0]]
+except IndexError:
+    printMsg("Failed to balance equation:\nNo solution exists.")
+    exit()
 
 fracts = [i[1] for i in [fraction(j) for j in ns] if i[1] != 1]
 if len(fracts) == 0:
@@ -102,15 +119,15 @@ else:
     denominator = max(fracts)
 
 coeffs = [j * denominator for j in ns]
+if 0 in coeffs:
+    printMsg("Failed to balance equation:\nNo solution exists.")
+    exit()
 ca = coeffs[:len(componentsDict[0])],coeffs[len(componentsDict[0]):]
 
-print("\n/////////////////////////\n")
-print(f"Coeffs: {coeffs}")
-print("Equation: " +
+printMsg(f"Coeffs: {coeffs}\nEquation: " +
     " => ".join([
         " + ".join([
             f'{k}{j.replace(" ", "")}' if k != 1 else j.replace(" ", "") for j,k in zip(i, ca[n])
         ]) for i,n in zip(componentsOriginal, [0,1])
     ])
 )
-print("\n/////////////////////////")
