@@ -1,5 +1,9 @@
+# Chemistry equation balancer
+# By Adin Ackerman
+# https://github.com/AdinAck
+
 import numpy as np
-from sympy import *
+from sympy import Matrix, fraction
 
 def printMsg(msg):
     print("\n/////////////////////////\n")
@@ -16,7 +20,7 @@ for i in n:
     char = eq[i]
     if char not in exclude:
         if char == char.upper():
-            if eq[i-1] not in ["(", " "]:
+            if eq[i-1] not in "( ":
                 eq = eq[:i] + " " + eq[i:]
                 n += [len(eq)-1]
 
