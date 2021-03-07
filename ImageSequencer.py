@@ -11,4 +11,3 @@ def run():
 		pyautogui.press("enter")
 		pyautogui.press("down")
 run()
- 
