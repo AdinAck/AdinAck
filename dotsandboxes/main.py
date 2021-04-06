@@ -6,11 +6,19 @@ class Player:
         self.color = color
         self.count = 0
 
-def click(coords):
+def click(*coords):
     global currentPlayer
+    board[coords] = currentPlayer
     currentPlayer += 1
     if currentPlayer == len(players):
         currentPlayer = 0
+
+def resize():
+    global winSize, scale, pad
+
+    winSize = win.get_size()
+    scale = ((s*3)//(WIDTH*4) if (s := min(winSize)) == winSize[0] else (s*3)//(HEIGHT*4))
+    pad = scale//10
 
 players = [Player((255,0,0)), Player((0,255,0)), Player((0,0,255))]
 currentPlayer = 0
@@ -22,7 +30,9 @@ board = np.zeros((HEIGHT+1,WIDTH+1,2))-1
 closed = np.ones((HEIGHT, WIDTH, 3))*255
 pg.init()
 
-win = pg.display.set_mode(size=(1280,720), flags=pg.RESIZABLE)
+win = pg.display.set_mode(size=(720,720), flags=pg.RESIZABLE)
+
+resize()
 
 start = 0,0
 run = True
@@ -36,6 +46,8 @@ while run:
     for event in events:
         if event.type == pg.QUIT:
             run = False
+        if event.type == pg.VIDEORESIZE:
+            resize()
         if event.type == pg.MOUSEBUTTONDOWN:
             start = mousePos
         if event.type == pg.MOUSEBUTTONUP and mousePos == start:
@@ -47,9 +59,6 @@ while run:
     keys = pg.key.get_pressed()
     mouseButtons = pg.mouse.get_pressed()
     mousePos = pg.mouse.get_pos()[0], pg.mouse.get_pos()[1]
-    winSize = win.get_size()
-    scale = ((s*3)//(WIDTH*4) if (s := min(winSize)) == winSize[0] else (s*3)//(HEIGHT*4))
-    pad = scale//10
 
     for x in range(WIDTH+1):
         for y in range(HEIGHT+1):
@@ -68,8 +77,7 @@ while run:
                     if color == (255,255,255):
                         color = [150]*3
                     if leftClick:
-                        board[y,x,0] = currentPlayer
-                        click((y,x,0))
+                        click(y,x,0)
 
                 pg.draw.rect(win, color, vert)
 
@@ -80,8 +88,7 @@ while run:
                     if color == (255,255,255):
                         color = [150]*3
                     if leftClick:
-                        board[y,x,1] = currentPlayer
-                        click((y,x,1))
+                        click(y,x,1)
 
                 pg.draw.rect(win, color, horz)
 
