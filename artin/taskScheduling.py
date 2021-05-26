@@ -1,3 +1,4 @@
+# TIN TIN THE VG KID
 class Task:
     def __init__(self, start, end, value):
         self.start, self.end, self.value = start, end, value
