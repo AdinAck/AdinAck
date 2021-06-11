@@ -3,6 +3,7 @@ import pyautogui
 import random
 import numpy as np
 
+#RYder was herer!!!!
 def printMaze(maze, seen, ypos, xpos):
     os.system('cls')
     for i in range(np.size(maze, 0)):
