@@ -1,0 +1,9 @@
+make -f "/Users/adinack/Projects/AdinAck/gcc/Makefile" --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/adinack/Projects/AdinAck'
+make: Leaving directory `/Users/adinack/Projects/AdinAck'
+ 
+make: /Users/adinack/Projects/AdinAck/gcc/Makefile: No such file or directory
+make: *** No rule to make target `/Users/adinack/Projects/AdinAck/gcc/Makefile'.
+make: Failed to remake makefile `/Users/adinack/Projects/AdinAck/gcc/Makefile'.
+make: *** No targets specified and no makefile found.  Stop.
+ 
