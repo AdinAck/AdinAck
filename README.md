@@ -4,7 +4,7 @@ Adin Ackerman | (760) 626-6570 | adinackerman@gmail.com
 
 # Portfolio
 
-[2021 Portfolio]([2021 Portfolio - YouTube](https://www.youtube.com/watch?v=g3itfoOmj-A))
+[2021 Portfolio](https://www.youtube.com/watch?v=g3itfoOmj-A)
 
 [Maker Portfolio for my MIT Application](https://www.youtube.com/watch?v=01xOdK2FQu4)
 
