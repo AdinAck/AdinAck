@@ -2,6 +2,12 @@
 
 Adin Ackerman | (760) 626-6570 | adinackerman@gmail.com
 
+# Portfolio
+
+[2021 Portfolio]([2021 Portfolio - YouTube](https://www.youtube.com/watch?v=g3itfoOmj-A))
+
+[Maker Portfolio for my MIT Application](https://www.youtube.com/watch?v=01xOdK2FQu4)
+
 # Experience
 
 ### **Python** - *3 years*
@@ -97,9 +103,3 @@ GPA: 4.3
 September 2021 - June 2025
 
 GPA: 4.0
-
-# Portfolio
-
-[GitHub](https://github.com/AdinAck)
-
-[Maker Portfolio for my MIT Application](https://www.youtube.com/watch?v=01xOdK2FQu4)
