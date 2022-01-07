@@ -10,7 +10,7 @@ Adin Ackerman | (760) 626-6570 | adinackerman@gmail.com
 
 # Experience
 
-### **Python** - *3 years*
+### **Python** - *4 years*
 
 I'm a total Python nerd. I take pride in making my code readable (in true Python fashion), optimized, and well documented. I've got all the Python tricks up my sleeve!
 
@@ -21,7 +21,7 @@ I'm a total Python nerd. I take pride in making my code readable (in true Python
 - NumPy, Tensorflow, etc.
 - IC Drivers / Hardware Interfaces
 
-### **Electrical Engineering** - *2+ years*
+### **Electrical Engineering** - *3 years*
 
 I've designed and tested 6 (and counting) PCBs over the years, and have loved every second of it. I've gained a very diverse range of knowledge and experience from my PCB projects, and have learned most of what I know simply by reading datasheets or application notes for the various ICs I intend to use... in addition to the knowledge gained by solving the many problems I have faced, of course.
 
