@@ -18,7 +18,7 @@ I'm a total Python nerd. I take pride in making my code readable (in true Python
 - Advanced Data Structures
 - Sockets
 - Tkinter
-- NumPy, Tensorflow, etc.
+- NumPy, Tensorflow, CoreML, etc.
 - IC Drivers / Hardware Interfaces
 
 ### **Electrical Engineering** - *3 years*
@@ -38,7 +38,7 @@ I've designed and tested 6 (and counting) PCBs over the years, and have loved ev
 
 ### September 2021 / Present - **Educational SCARA Motion Control System** (WIP)
 
-Using a custom FOC motor controller (below), me and a friend created a "robot arm" -- one could call it -- for introducing young engineers into robotics engineering. Thanks to the usage of the FOC Motor Controller, no gears are required since FOC allows for maximum torque at all\* velocities, in conjunction with very high precision and accuracy.
+Using a custom FOC motor controller (below), a friend and I created a "robot arm" -- one could call it -- for introducing young engineers into robotics engineering. Thanks to the usage of the FOC Motor Controller, no gears are required since FOC allows for maximum torque at all\* velocities, in conjunction with very high precision and accuracy.
 
 A professor of ours has given us $500 to continue development of the robot arm, and to set up an educational display for students to easily access. The display will be incorporated into the intro to Electrical Engineering course curriculum. A popular maker space at our university graciously provided us space and resources for our exhibit, and we are very grateful!
 
