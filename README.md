@@ -4,41 +4,56 @@ Adin Ackerman | (760) 626-6570 | adinackerman@gmail.com
 
 # Portfolio
 
+[GitHub](https://github.com/AdinAck)
+
 [2021 Portfolio](https://www.youtube.com/watch?v=g3itfoOmj-A)
 
 [Maker Portfolio for my MIT Application](https://www.youtube.com/watch?v=01xOdK2FQu4)
 
+# About Me
+
+I have been passionate about computers and electronics for many years. Most of my education is informal, as I spent my days after school learning about electronics and computer engineering. I have a deep passion for the interaction between hardware and software, with a focus on "user" experience and education as well. All of my projects are open source, and I try to make it as easy as possible for other engineers to learn from my work. For all of my projects, I take extra time and care to make sure I do everything *right*, I am real stringent about good work being done, doing the best I can to live up to the high standard of experts in the industry.
+
 # Experience
 
-### **Python** - *3 years*
+### **Electrical Engineering** - *3 years*
+
+I've designed and tested 15 or so PCBs over the years, and have loved every second of it. I've gained a very diverse range of knowledge and experience from my PCB projects, and have learned most of what I know simply by reading datasheets or application notes for the various ICs I intend to use... in addition to the knowledge gained by solving the many problems I have faced, of course.
+
+- Rapid Prototyping
+- PCB Design
+  - Altium
+  - KiCAD
+- Embedded Systems
+  - Arduino
+  - ASF4 (Atmel SAM)
+  - RP2040, Espressif SDK
+- Debugging
+  - Standard hardware debugging practices
+  - Recently began using lldb to debug through a debugger chip, and on normal C, C++ programs
+- Reflow Soldering (and of course hand held soldering)
+- Oscilloscope Usage
+
+Recently, I have been learning ARM64 assembly for Apple Silicon processors, but it seems to be very similar to ARM32 assembly so far, so I am preparing myself for learning assembly for embedded systems.
+
+### **Computer Science** - *4 years*
 
 I'm a total Python nerd. I take pride in making my code readable (in true Python fashion), optimized, and well documented. I've got all the Python tricks up my sleeve!
 
 - CPython/MicroPython/CircuitPython
-- Advanced Data Structures
+- Advanced Data Structures and OOP Practices
 - Sockets
 - Tkinter
-- NumPy, Tensorflow, etc.
+- NumPy, Tensorflow, CoreML, etc.
 - IC Drivers / Hardware Interfaces
 
-### **Electrical Engineering** - *2+ years*
-
-I've designed and tested 6 (and counting) PCBs over the years, and have loved every second of it. I've gained a very diverse range of knowledge and experience from my PCB projects, and have learned most of what I know simply by reading datasheets or application notes for the various ICs I intend to use... in addition to the knowledge gained by solving the many problems I have faced, of course.
-
-- PCB Design
-- Embedded Systems
-  - Arduino
-  - ASF4 (Atmel SAM)
-  - RP2040 SDK
-- Debugging
-- Reflow Soldering (and of course hand held soldering)
-- Oscilloscope Usage
+Through Python, I have become deeply ingrained in the OOP mindset, and I am constantly learning more. Another high level language I enjoy is Swift, there are many Swift projects on my [GitHub](https://github.com/AdinAck) to see.
 
 # Notable Projects
 
 ### September 2021 / Present - **Educational SCARA Motion Control System** (WIP)
 
-Using a custom FOC motor controller (below), me and a friend created a "robot arm" -- one could call it -- for introducing young engineers into robotics engineering. Thanks to the usage of the FOC Motor Controller, no gears are required since FOC allows for maximum torque at all\* velocities, in conjunction with very high precision and accuracy.
+Using a custom FOC motor controller (below), a friend and I created a "robot arm" -- one could call it -- for introducing young engineers into robotics engineering. Thanks to the usage of my custom motor controller, no gears are required since FOC allows for maximum torque at all\* velocities, in conjunction with very high precision and accuracy.
 
 A professor of ours has given us $500 to continue development of the robot arm, and to set up an educational display for students to easily access. The display will be incorporated into the intro to Electrical Engineering course curriculum. A popular maker space at our university graciously provided us space and resources for our exhibit, and we are very grateful!
 
@@ -83,7 +98,17 @@ This was my first PCB project. I gained invaluable experience tackling the issue
 
 # Previous Internships
 
-### **Spreadtrum Communications Inc, Sorrento Valley** - *Electrical Engineering Intern*
+### Existential Robotics Lab, UCSD - *Paid Intern*
+
+March 2022 - Present
+
+- The work to be done is rather open ended, but I have settled into handling mostly "behind the scenes" type work, getting the basic drone functions up and running so the grad students have a platform to work their magic.
+
+- I have also been doing PCB work for them, by my own volition.
+
+- Since I have experience with hobby grade quadcopters, I have been surprisingly useful when diagnosing issues, flying the quads, and of course assembling them.
+
+### **Spreadtrum Communications Inc, Sorrento Valley** - *Paid Electrical Engineering Intern*
 
 June 2019 - August 2019
 
@@ -102,4 +127,4 @@ GPA: 4.3
 
 September 2021 - June 2025
 
-GPA: 4.0
+GPA: 3.9
