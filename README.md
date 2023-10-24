@@ -4,7 +4,7 @@
 
 ## About Me
 
-I have been passionate about computers and electronics for many years. Most of my education is informal, as I spent my days after school learning about electronics and computer engineering. I have a deep passion for the interaction between hardware and software, with a focus on user experience and education as well. In a nutshell, I am very detail oriented.
+I have been passionate about computers and electronics since a young age. Most of my education is informal, as I spent my days after school learning about electronics and software. I strive for perfection to the best of my ability with all of my projects. I'm not afraid to do things by hand, I build my own tools, take the time to do things *right* and don't compromise performance or architecture in the interest of expediency.
 
 ## Education
 
@@ -16,23 +16,21 @@ GPA: 3.9
 
 ### **Electrical Engineering** - *4 years*
 
-- **PCB Design:** Altium/KiCAD, roughly 15 PCBs designed and assembled, embedded microcontrollers, motor control systems, battery management systems
-- **Embedded Systems:** Embedded Rust, Baremetal, ASF4 (Atmel SAM), Arduino
-- **Debugging:** Standard hardware debugging practices, using lldb to debug microcontroller through a debugger chip, and on normal C, C++ programs, oscilloscopes, bench power supplies.
-- **Soldering:** By hand, reflow (with an oven or sand in a pan)
+- **PCB Design:** Altium/KiCAD, created power supplies, motor control systems, battery management systems
+- **Embedded Systems:** Embedded Rust, Baremetal - IC drivers, peripheral interfaces, controls, validation
 
 ### **Software Engineering** - *5 years*
 
-- Advanced design and software architecture and OOP Practices, threading, networking (sockets, http servers, etc.), IC drivers / hardware interfaces
-- Bluetooth - I have done multiple projects involving an ESP32 embedded on a PCB, running a GATT server accessed by an app made in Swift (another one of my favorite languages)
+- Advanced design, architecture, and OOP practices. I enjoy writing documentation and developing verbose interfaces.
+- Bluetooth - I have made my own BLE stacks on the server and client side, created generic frameworks for BLE between embedded devices and personal devices.
 
 ## Notable Projects
 
-### May 2023 - **stm32f0xx-hal** [GitHub](https://github.com/stm32-rs/stm32f0xx-hal)
+### May / July 2023 - **Headlights** [GitHub](https://github.com/AdinAck/Onewheel-Headlights)
 
-As I began my deep dive into microcontroller systems via *Embedded Rust*, I found that some key features were left out of the official HAL for the SMT32F0. I needed complimentary and center-aligned PWM output for FOC motor control applications. The high level PWM interface in the HAL did not support this, so I added this functionality (my pull request was accepted). It was a very fun and successful introduction to Embedded Rust!
+I created a 100v current-mode SMPS to drive high voltage headlights (that I also made) for my self balancing electric skateboard. I learned a lot about the half-bridge topology, gate driving via bootstrapping, preventing cross-over, making a sufficiently large LC filter, controls, and in software, how to ensure all conditions lead to a failsafe state. I contributed to multiple Embedded Rust projects during this time. I added complementary and center aligned PWM to [stm32f0xx-hal](https://github.com/stm32-rs/stm32f0xx-hal), a procedural macro for generating BLE advertisement data to [nrf-softdevice](https://github.com/embassy-rs/nrf-softdevice), and extended functionality of [heapless](https://github.com/rust-embedded/heapless). I created my own crates (like [embedded-command](https://github.com/AdinAck/embedded-command)) as well.
 
-### September 2022 / Present - **LEGv8 Simulator** [GitHub](https://github.com/AdinAck/LEGv8-Simulator)
+### September 2022 - **LEGv8 Simulator** [GitHub](https://github.com/AdinAck/LEGv8-Simulator)
 
 In preparation for a class I took, I created a powerful simulator for the LEG instruction set, providing many useful tools for writing and debugging LEG assembly code. It has full linting capabilities, breakpoints, step over routines, register and memory access indicators / history. I've tried to make the experience of writing assembly as painless as possible.
 
@@ -48,7 +46,7 @@ A motor controller capable of running FOC algorithms to drive BLDC motors with h
 
 September 2022 - Present
 
-- teach PCB design, embedded systems, BLE interaction with iPhone via Swift, Python, etc.
+- teach PCB design, embedded systems, BLE interaction with iPhone via Swift, Python, Rust, etc.
 
 ### **Existential Robotics Lab, UCSD** - *Paid Intern*
 
